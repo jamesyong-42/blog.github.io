@@ -1,0 +1,11 @@
+query post($id: ID!) {
+  node (id: $id) {
+    ... on Issue {
+      title
+      body
+      bodyHTML
+    }
+  }
+}
+
+

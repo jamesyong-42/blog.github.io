@@ -1,0 +1,22 @@
+query posts($owner: String!, $name: String!, $last: Int!) {
+  repository(owner: $owner, name: $name) {
+    issues(last: $last, states:OPEN) {
+      edges {
+        node {
+          title
+          url
+          id
+          labels(first:5) {
+            edges {
+              node {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

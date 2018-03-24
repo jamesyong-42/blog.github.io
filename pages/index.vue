@@ -41,7 +41,7 @@ export default {
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: #1b195b;
+  background: linear-gradient(0deg, #fd9d7a 0%, #82145a 52%, #2f064b 100%);
   overflow: hidden;
 }
 #blog-container {
@@ -50,31 +50,13 @@ export default {
   height: 80vh;
   overflow: hidden;
   margin: 10vh auto;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #540c5288;
   position: relative;
   left: -10vw;
-  border-radius: 20px;
+  border-radius: 50px;
   padding: 20px;
   z-index: 9999;
-}
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>

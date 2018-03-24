@@ -1,16 +1,13 @@
 <template>
   <div id="bg-container">
-    <div class="stars-tiny bg-item" data-depth="0.25"></div>
-    <div class="stars-mid bg-item" data-depth="0.35"></div>
-    <div class="stars-big bg-item" data-depth="0.45"></div>
-    <img class="bg-item" src="/lighthouse-cloud2.svg" data-depth="0.55"/>
-    <img class="bg-item" src="/lighthouse-cloud1.svg" data-depth="0.65"/>
-    <img class="bg-item" src="/lighthouse.svg" data-depth="0.75"/>
-    <img class="bg-item" src="/lighthouse-rock.svg" data-depth="0.85"/>
-    <img class="bg-item" src="/lighthouse-wave1.svg" data-depth="0.95"/>
-    <img class="bg-item" src="/lighthouse-wave2.svg" data-depth="1.05"/>
-    <img class="bg-item" src="/lighthouse-wave3.svg" data-depth="1.15"/>
-
+    <div class="stars-tiny bg-item" data-depth="0.15"></div>
+    <div class="stars-mid bg-item" data-depth="0.25"></div>
+    <div class="stars-big bg-item" data-depth="0.30"></div>
+    <img class="bg-item" src="/lighthouse-wave4.svg" data-depth="0.35"/>
+    <img class="bg-item" src="/lighthouse-wave3.svg" data-depth="0.40"/>
+    <img class="bg-item" src="/lighthouse.svg" data-depth="0.50"/>
+    <img class="bg-item" src="/lighthouse-wave2.svg" data-depth="0.55"/>
+    <img class="bg-item" src="/lighthouse-wave1.svg" data-depth="0.60"/>
   </div>
 </template>
 
@@ -40,11 +37,11 @@
 
 <style>
   #bg-container {
-    width: 120%;
-    height: 120%;
+    width: 140%;
+    height: 140%;
     position: absolute;
-    top: -10%;
-    left: -10%;
+    top: 0;
+    left: -20%;
   }
   .bg-item {
     width: 100%;
@@ -52,6 +49,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: cover;
   }
   .stars-tiny {
     background-image: url("/stars-tiny.png");

@@ -16,10 +16,27 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: {
+    color: '#1cfaff',
+    height: '5px'
+  },
   /*
   ** Build configuration
   */
+  env: {
+    githubToken: '5be3ffafc3f7e6c059597dd39779620e75026ede'
+  },
+  css: [
+    'normalize.css',
+    'highlight.js/styles/github.css',
+    '~assets/scss/main.scss'
+    // Load a Node.js module directly (here it's a Sass file)
+    // 'bulma',
+    // CSS file in the project
+    // '@/assets/css/main.css',
+    // SCSS file in the project
+    // '@/assets/css/main.scss'
+  ],
   build: {
     /*
     ** Run ESLint on save
@@ -33,6 +50,12 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+  modules: ['@nuxtjs/apollo'],
+  apollo: {
+    clientConfigs: {
+      default: '~/apollo/client-configs/default.js'
     }
   }
 }
