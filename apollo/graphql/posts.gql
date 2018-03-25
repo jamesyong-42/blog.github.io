@@ -1,15 +1,25 @@
 query posts($owner: String!, $name: String!, $last: Int!) {
   repository(owner: $owner, name: $name) {
-    issues(last: $last, states:OPEN) {
+    labels(first:20) {
       edges {
         node {
+          name
+        }
+      }
+    }
+    issues(last: $last, labels: "Yong", states:OPEN) {
+      totalCount
+      edges {
+        node {
+          number
           title
           url
           id
-          labels(first:5) {
+          labels(first:2) {
             edges {
               node {
                 name
+                description
               }
             }
           }

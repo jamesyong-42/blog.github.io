@@ -4,6 +4,14 @@ query post($id: ID!) {
       title
       body
       bodyHTML
+      labels(first:2) {
+        edges {
+          node {
+            name
+            description
+          }
+        }
+      }
     }
   }
 }

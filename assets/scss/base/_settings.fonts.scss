@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    #FONTS
+\*------------------------------------*/
+
+@font-face {
+  font-family: 'Lora-Regular';
+  src: url('/Lora-Regular.eot');
+  src: url('/Lora-Regular.woff2') format('woff2'),
+  url('/Lora-Regular.woff') format('woff'),
+  url('/Lora-Regular.ttf') format('truetype'),
+  url('/Lora-Regular.svg#Lora-Regular') format('svg'),
+  url('/Lora-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// Families
+$ft-fm--en: Lora-Regular;
+$ft-fm--cn: "Microsoft YaHei";
+$ft-fm--cn-quote: FangSong, SimSun, STSong;
+$ft-fm--local: sans-serif;
+
+$ft-fm-def: $ft-fm--en, $ft-fm--cn, $ft-fm--local;
+$ft-fm-quote: $ft-fm--en, $ft-fm--cn-quote, $ft-fm--local;
+
+$ft-fm-code: Consolas, "Courier New", Courier;
+
+
+
+
+
+// Weight
+$ft-wt-def:   400;
+$ft-wt-light: 400;
+$ft-wt-bold:  900;
+
+$ft-wt-h1-6: $ft-wt-bold;
+
+
+
+
+
+// Size
+
+$ft-sz-def:  1.1rem;
+$ft-sz-sm:   1rem;
+$ft-sz-smer: 0.9rem;
+
+$ft-sz-page-title: 2.8rem;
+
+$ft-sz-h1: 2.2rem;
+$ft-sz-h2: 1.8rem;
+$ft-sz-h3: 1.6rem;
+$ft-sz-h4: 1.4rem;
+$ft-sz-h5: 1.2rem;
+$ft-sz-h6: 1.1rem;
+
+$ft-sz-qt: 1rem;

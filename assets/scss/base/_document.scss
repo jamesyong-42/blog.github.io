@@ -19,10 +19,11 @@ html
   }
 
   /* 1 */
-  //word-spacing: 1px; /* 1 */
+  word-spacing: 1px; /* 1 */
+  letter-spacing: 1px;
   //line-height: 20px; /* 2 */
-  //-ms-text-size-adjust: 100%; /* 3 */
-  //-webkit-text-size-adjust: 100%; /* 3 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
   -moz-osx-font-smoothing: grayscale; /* 4 */
   -webkit-font-smoothing: antialiased; /* 4 */
   box-sizing: border-box;
@@ -33,4 +34,39 @@ html
 *, *:before, *:after
 {
   box-sizing: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $ft-fm-def;
+  font-weight: $ft-wt-bold;
+  margin: 0.5em 0;
+}
+p {
+  font-family: $ft-fm-def;
+  font-size: $ft-sz-def;
+  line-height: 1.8em;
+  margin: 1em 0;
+}
+h1 {
+  font-size: $ft-sz-h1;
+}
+h2 {
+  font-size: $ft-sz-h2;
+}
+h3 {
+  font-size: $ft-sz-h3;
+}
+
+h4 {
+  font-size: $ft-sz-h4;
+}
+
+h5 {
+  font-size: $ft-sz-h5;
+}
+
+h6 {
+  font-size: $ft-sz-h6;
+}
+.post__title {
+  font-size: $ft-sz-page-title;
 }

@@ -24,12 +24,14 @@ module.exports = {
   ** Build configuration
   */
   env: {
-    githubToken: '5be3ffafc3f7e6c059597dd39779620e75026ede'
+    githubToken: '5be3ffafc3f7e6c059597dd39779620e75026ede',
+    labels: ['TV', 'Movie', 'Music', 'Coding', 'Design', 'Reading', 'Travel']
   },
   css: [
     'normalize.css',
     'highlight.js/styles/github.css',
-    '~assets/scss/main.scss'
+    '~assets/scss/main.scss',
+    '@/assets/scss/main.scss'
     // Load a Node.js module directly (here it's a Sass file)
     // 'bulma',
     // CSS file in the project
@@ -52,6 +54,9 @@ module.exports = {
       }
     }
   },
+  plugins: [
+    {src: '~/plugins/overscroll', ssr: false} //set ssr:false fix 'SyntaxError: Unexpected token import'
+  ],
   modules: ['@nuxtjs/apollo'],
   apollo: {
     clientConfigs: {

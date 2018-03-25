@@ -1,35 +1,50 @@
 <template>
-  <div id="article-container">
-    <nuxt-link :to="'/'">返回</nuxt-link>
-    <template v-html="body"></template>
+  <div class="post">
+    <nuxt-link id="return-btn" :to="'/'"><i class="fa fa-angle-left"></i></nuxt-link>
+    <div id="mask">
+      <!--<h1>{{title}}</h1>-->
+      <!--<div v-html="body"></div>-->
+      <div class="mask__double"
+           :class="$store.state.curPostStyle">
+
+      </div>
+    </div>
+    <h1 class="post__title">{{title}}</h1>
+    <div v-html="body"></div>
   </div>
 </template>
 
 <script>
   import marked from 'marked'
-  import gql from 'graphql-tag'
-  const fetchBody = gql`
-    query repository($owner: String!, $name: String!, $last: Int!) {
-      repository(owner: $owner, name: $name) {
-        issues(last: $last, states:OPEN) {
-          edges {
-            node {
-              title
-              url
-              labels(first:5) {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-  }
-  `
+  import QUERY_POST from '~/apollo/graphql/post.gql'
+  import Scrollbar from 'smooth-scrollbar'
   export default {
+    async asyncData({ app, route, store, error }) {
+      // Default data
+      let client = app.apolloProvider.defaultClient
+      let data = {
+        post: {},
+        title: '',
+        body: '',
+        label: '',
+        returnBtn: {},
+        mask: {}
+      }
+      const slug = route.params.slug
+      const num = parseInt(slug.split('-')[0])
+      const res = await client.query({
+        query: QUERY_POST,
+        variables: {
+          id: store.state.postIDs[num]
+        }
+      })
+      data.post = res
+      data.body = res.data.node.bodyHTML
+      data.title = res.data.node.title
+      data.label = res.data.node.labels.edges[0].node.description
+      console.log(data.body)
+      return data
+    },
     components: {
     },
     data () {
@@ -37,20 +52,99 @@
       }
     },
     computed: {
-      body () {
-        return marked('**marked**')
-      }
+    },
+    beforeMount () {
+
     },
     mounted () {
+      let scrollBar = this.$store.state.scrollBar
+      if (!scrollBar) {
+        scrollBar = Scrollbar.init(document.querySelector('.blog__container'), this.scrollBarOptions)
+        Scrollbar.detachStyle()
+        this.$store.commit('setScrollBar', scrollBar)
+      }
+      this.$store.commit('setPostLoading', false)
+      this.returnBtn = document.getElementById('return-btn')
+      this.mask = document.getElementById('mask')
+      this.$store.state.scrollBar.addListener(this.freezeReturnBtn)
     },
     beforeRouterLeave () {
     },
     methods: {
+      freezeReturnBtn () {
+        const offset = this.$store.state.scrollBar.offset.y
+        this.returnBtn.style.transform = `translate3d(0, ${offset}px ,0)`
+        this.mask.style.transform = `translate3d(0, ${offset}px ,0)`
+      }
     }
   }
 </script>
 
-<style>
+<style lang="scss">
+  @import "~assets/scss/main.scss";
 
+  .post{
+    margin: -20px;
+    padding: 65px;
+    transform-style: preserve-3d;
+    > a {
+      z-index: 999;
+      position: absolute;
+      will-change: transform;
+      right: 45px;
+      top: 30px;
+      > i {
+        font-size: 50px;
+        color: white;
+      }
+    }
+    &__title {
+      border-bottom-style: double;
+      border-bottom-width: 8px;
+    }
+  }
+
+  #mask {
+    will-change: transform;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    left: 0;
+    z-index: 998;
+    background: white;
+    top: -130px;
+    overflow: hidden;
+
+  }
+  .mask__double {
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    left: 0;
+    top: 130px;
+    z-index: 998;
+    background-color: #3b8070;
+    &.style1 {
+      @include linearGradient($clr-gr-deg, $clr-1-1, $clr-1-2);
+    }
+    &.style2 {
+      @include linearGradient($clr-gr-deg, $clr-2-1, $clr-2-2);
+    }
+    &.style3 {
+      @include linearGradient($clr-gr-deg, $clr-3-1, $clr-3-2);
+    }
+    &.style4 {
+      @include linearGradient($clr-gr-deg, $clr-4-1, $clr-4-2);
+    }
+    &.style5 {
+      @include linearGradient($clr-gr-deg, $clr-5-1, $clr-5-2);
+    }
+    &.style6 {
+      @include linearGradient($clr-gr-deg, $clr-6-1, $clr-6-2);
+    }
+    &.style7 {
+      @include linearGradient($clr-gr-deg, $clr-7-1, $clr-7-2);
+    }
+  }
 
 </style>

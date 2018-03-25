@@ -1,0 +1,89 @@
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($radius, $color) {
+  -webkit-box-shadow: $radius $color;
+          box-shadow: $radius $color;
+}
+
+@mixin transition-duration($duration) {
+  -webkit-transition-duration: $duration;
+     -moz-transition-duration: $duration;
+      -ms-transition-duration: $duration;
+       -o-transition-duration: $duration;
+          transition-duration: $duration;
+}
+
+@mixin rotate($angular) {
+  -webkit-transform: rotate($angular);
+     -moz-transform: rotate($angular);
+      -ms-transform: rotate($angular);
+       -o-transform: rotate($angular);
+          transform: rotate($angular);
+}
+
+@mixin rotateY($angular) {
+  -webkit-transform: rotate3d(0, 1, 0, $angular);
+     -moz-transform: rotate3d(0, 1, 0, $angular);
+      -ms-transform: rotate3d(0, 1, 0, $angular);
+       -o-transform: rotate3d(0, 1, 0, $angular);
+          transform: rotate3d(0, 1, 0, $angular);
+}
+
+@mixin linearGradient($deg, $top, $bottom){
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient($deg,  $top 0%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, $deg, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient($deg, $top 0%, $bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient($deg, $top 0%,$bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient($deg,  $top 0%,$bottom 100%); /* IE10+ */
+  background: linear-gradient($deg,  $top 0%,$bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+@mixin linearGradient3($deg, $top, $bottom){
+  background-image: -moz-linear-gradient($deg, $top, $top, $bottom, $top, $top); /* FF3.6+ */
+  background-image: -webkit-linear-gradient($deg, $top, $top, $bottom, $top, $top); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient($deg, $top, $top, $bottom, $top, $top); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient($deg, $top, $top, $bottom, $top, $top); /* IE10+ */
+  background-image: linear-gradient($deg, $top, $top, $bottom, $top, $top); /* W3C */
+}
+
+@mixin blogTextColorTheme($clr1, $clr2, $clr3, $clr-p){
+  h2, h3, h4, h5, h6, p {
+    color: $clr-p;
+  }
+  ::selection {
+    background-color: $clr2;
+  }
+  blockquote {
+    background-color: $clr-p;
+    border-color: $clr3;
+    color: $clr3;
+    p {
+      color: $clr3;
+    }
+    em {
+      color: $clr-def-darker;
+    }
+  }
+  .post__title {
+    border-bottom-color: $clr2;
+  }
+  .loading__placeholder {
+    background-color: $clr2;
+  }
+  .loading__wave {
+    @include linearGradient3(90deg, rgba(0, 0, 0, 0), $clr1)
+  }
+  //.loading__wave-bg {
+  //  background-color: $clr1;
+  //}
+}

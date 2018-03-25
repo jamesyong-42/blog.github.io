@@ -17,6 +17,7 @@
     "apollo-cache-inmemory": "^1.1.11",
     "apollo-link": "^1.2.1",
     "apollo-link-http": "^1.5.3",
+    "font-awesome": "^4.7.0",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.8.0",
     "highlight.js": "^9.12.0",
