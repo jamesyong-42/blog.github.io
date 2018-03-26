@@ -3,6 +3,19 @@
     <background></background>
     <div class="sub-container">
       <img class="ribben" src="/ribben.svg" @click="infoOpen"/>
+      <div class="SidePanel">
+        <div class="SidePanel__BgDoubleContainer">
+          <background-double></background-double>
+        </div>
+        <div class="SidePanel__Content">
+          <div class="SidePanel__Content__Head">
+            <img src="/logo.svg"/>
+          </div>
+          <div class="SidePanel__Content__Middle"></div>
+          <div class="SidePanel__Content__Bottom"></div>
+        </div>
+
+      </div>
       <div class="blog__container"
            :class="$store.state.curPostStyle">
         <nuxt-child/>
@@ -32,13 +45,15 @@
 
 <script>
 import Background from '~/components/Background.vue'
+import BackgroundDouble from '~/components/BackgroundDouble.vue'
 import PostLoading from '~/components/PostLoading.vue'
 import Scrollbar from 'smooth-scrollbar'
 
 export default {
   components: {
     Background,
-    PostLoading
+    PostLoading,
+    BackgroundDouble
   },
   data () {
     return {
@@ -61,6 +76,12 @@ export default {
       Scrollbar.detachStyle()
       this.$store.commit('setScrollBar', scrollBar)
     }
+    const panel = document.querySelector('.SidePanel')
+    const offsetTop = panel.getBoundingClientRect().top
+    const offsetLeft = panel.getBoundingClientRect().left
+    const bgDouCont = panel.childNodes[0]
+    bgDouCont.style.top = `${-offsetTop}px`
+    bgDouCont.style.left = `${-offsetLeft}px`
   },
   methods: {
     infoOpen () {
@@ -81,7 +102,7 @@ export default {
   }
   .sub-container {
     width: 80%;
-    max-width: 1000px;
+    max-width: 1200px;
     height: 100%;
     margin: auto;
     position: relative;
@@ -101,9 +122,57 @@ export default {
       transform: translate3D(0, 70px, 0);
     }
   }
+  .SidePanel {
+    width: 30%;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: 10vh;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    padding: 20px;
+    box-shadow: 0 0 15px rgb(58, 10, 56);
+    border-radius: 50px;
+    // background-color: rgba(84, 12, 82, 0.53);
+
+    &__BgDoubleContainer {
+      background: linear-gradient(0deg, #fd9d7a 0%, #82145a 52%, #2f064b 100%);
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      filter: blur(10px);
+    }
+    &__Content {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0;
+      left:0;
+      z-index: 999;
+      &__Head {
+        width: 100%;
+        margin-top: 20px;
+        > img {
+          width: 60%;
+          margin-left: 20%;
+          object-fit: contain;
+          cursor: pointer;
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          -ms-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          &:hover {
+            filter: hue-rotate(20deg);
+          }
+        }
+      }
+    }
+
+  }
   .blog__container {
-    width: 65vw;
-    max-width: 800px;
+    width: 66%;
+    // max-width: 800px;
     height: 80vh;
     overflow: hidden;
     margin-top: 10vh;
@@ -148,82 +217,6 @@ export default {
       // @include blogTextColorTheme($clr-7-1, $clr-7-2, $clr-7-3, $clr-7-p);
     }
   }
-
-  .loading {
-    pointer-events: none;
-    padding: 65px;
-    opacity: 0;
-    -webkit-transition: opacity 0.5s ease;
-    -moz-transition: opacity 0.5s ease;
-    -ms-transition: opacity 0.5s ease;
-    -o-transition: opacity 0.5s ease;
-    transition: opacity 0.5s ease;
-
-    &--on {
-      opacity: 1;
-    }
-    &__wave {
-      width: calc(100% - 130px);
-      height: calc(100% - 130px);
-      background-size: 3000px 100%;
-      -webkit-animation: loadingAni 1s linear infinite;
-      -moz-animation: loadingAni 1s linear infinite;
-      animation: loadingAni 1s linear infinite;
-      position: absolute;
-      top: 65px;
-      left: 65px;
-      z-index: 999;
-    }
-    &__wave-bg {
-      width: calc(100% - 130px);
-      height: calc(100% - 130px);
-      position: absolute;
-      top: 65px;
-      left: 65px;
-      z-index: 997;
-    }
-    &__placeholder {
-      /*background-size: 1600px 100%;*/
-      /*-webkit-animation: loadingAni 1s linear infinite;*/
-      /*-moz-animation: loadingAni 1s linear infinite;*/
-      /*animation: loadingAni 1s linear infinite;*/
-      position: relative;
-      margin: $ft-sz-qt;
-      z-index: 998;
-      &--title {
-        width: 15%;
-        height: $ft-sz-page-title;
-      }
-      &--h1 {
-        width: 20%;
-        height: $ft-sz-h1;
-      }
-      &--p-s {
-        width: 25%;
-        height: $ft-sz-qt;
-      }
-      &--p-m {
-        width: 55%;
-        height: $ft-sz-qt;
-      }
-      &--p-l {
-        width: 85%;
-        height: $ft-sz-qt;
-      }
-    }
-  }
-  /*@-webkit-keyframes loadingAni {*/
-    /*0%{background-position:100% 50%}*/
-    /*100%{background-position:0% 50%}*/
-  /*}*/
-  /*@-moz-keyframes loadingAni {*/
-    /*0%{background-position:100% 50%}*/
-    /*100%{background-position:0% 50%}*/
-  /*}*/
-  /*@keyframes loadingAni {*/
-    /*0%{background-position:100% 50%}*/
-    /*100%{background-position:0% 50%}*/
-  /*}*/
 
 
 </style>
