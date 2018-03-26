@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "deploy": "push-dir --dir=dist --branch=gh-pages"
   },
   "dependencies": {
     "@nuxtjs/apollo": "^3.0.5",
@@ -34,6 +35,7 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
     "node-sass": "^4.7.2",
+    "push-dir": "^0.4.1",
     "sass-loader": "^6.0.7"
   }
 }

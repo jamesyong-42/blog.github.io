@@ -2,11 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1ccc69d-bcf8-4bdd-a77a-55a7b0d3ea83" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/BackgroundDouble.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/logo.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/.nojekyll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/fonts/fontawesome-webfont.674f50d.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/fonts/fontawesome-webfont.af7ae50.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/fonts/fontawesome-webfont.b06871f.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/fonts/fontawesome-webfont.fee66e7.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/avatar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/Lora-Regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/Lora-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/Lora-Regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/Lora-Regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/Menlo-Regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/Menlo-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/Menlo-Regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/Menlo-Regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/stars-big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/stars-mid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/stars-tiny.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/200.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/LICENSES" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/app.e608b72abbe8018fff88.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/img/fontawesome-webfont.912ec66.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/layouts_default.1eab2afffa49e2ccba80.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/manifest.07b2f7e670d9a4a073d6.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/pages_index.1c5de643d07fd82d3d6b.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/pages_index__slug.b146832498dd6712e00a.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/pages_index_index.03a7fa30841e8ee5d15f.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/_nuxt/vendor.a19d9e08d2ec3cbe06f1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/Lora-Regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/Menlo-Regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/font.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/lighthouse-wave1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/lighthouse-wave2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/lighthouse-wave3.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/lighthouse-wave4.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/lighthouse.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/logo.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/ribben.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apollo/client-configs/default.js" afterPath="$PROJECT_DIR$/apollo/client-configs/default.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index.vue" afterPath="$PROJECT_DIR$/pages/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,14 +59,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="-955">
               <caret line="153" column="25" lean-forward="false" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
               <folding>
                 <element signature="e#2054#2106#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nuxt.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,16 +155,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/scss/base/main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
-              <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_post.base.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/base/_post.base.scss">
           <provider selected="true" editor-type-id="text-editor">
@@ -146,7 +194,6 @@
         <option value="$PROJECT_DIR$/static/lighthouse-wave4.svg" />
         <option value="$PROJECT_DIR$/components/Background.vue" />
         <option value="$PROJECT_DIR$/plugins/vue-nprogress.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/plugins/overscroll.js" />
         <option value="$PROJECT_DIR$/apollo/graphql/posts.gql" />
         <option value="$PROJECT_DIR$/apollo/graphql/post.gql" />
@@ -180,6 +227,7 @@
         <option value="$PROJECT_DIR$/apollo/client-configs/default.js" />
         <option value="$PROJECT_DIR$/components/BackgroundDouble.vue" />
         <option value="$PROJECT_DIR$/pages/index.vue" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -222,6 +270,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -443,7 +492,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -576,7 +624,8 @@
       <workItem from="1521863159131" duration="16625000" />
       <workItem from="1521881575872" duration="30205000" />
       <workItem from="1521925039262" duration="76332000" />
-      <workItem from="1522089364463" duration="4000" />
+      <workItem from="1522089364463" duration="39000" />
+      <workItem from="1522089434777" duration="1161000" />
     </task>
     <task id="LOCAL-00001" summary="building up">
       <created>1521885830840</created>
@@ -599,11 +648,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522063034905</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="building up">
+      <created>1522089375515</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1522089375515</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156367000" />
+    <option name="totallyTimeSpent" value="157563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="630" y="235" width="2128" height="1038" extended-state="0" />
@@ -707,13 +763,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/smooth-scrollbar/index.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/smooth-scrollbar/index.js">
@@ -822,21 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
           <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -992,11 +1033,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="-955">
           <caret line="153" column="25" lean-forward="false" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
           <folding>
             <element signature="e#2054#2106#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
