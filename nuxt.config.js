@@ -24,7 +24,7 @@ module.exports = {
   ** Build configuration
   */
   env: {
-    githubToken: '5be3ffafc3f7e6c059597dd39779620e75026ede',
+    githubToken: '0202e800c8284fdd456bb0f5385c33ccaac074df',
     labels: ['TV', 'Movie', 'Music', 'Coding', 'Design', 'Reading', 'Travel']
   },
   css: [

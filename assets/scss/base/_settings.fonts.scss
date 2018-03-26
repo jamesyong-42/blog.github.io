@@ -1,19 +1,29 @@
 /*------------------------------------*\
     #FONTS
 \*------------------------------------*/
-
+// @import "/fonts/font.css";
 @font-face {
   font-family: 'Lora-Regular';
-  src: url('/Lora-Regular.eot');
-  src: url('/Lora-Regular.woff2') format('woff2'),
-  url('/Lora-Regular.woff') format('woff'),
-  url('/Lora-Regular.ttf') format('truetype'),
-  url('/Lora-Regular.svg#Lora-Regular') format('svg'),
-  url('/Lora-Regular.eot?#iefix') format('embedded-opentype');
+  src: url('/fonts/Lora-Regular.eot');
+  src: url('/fonts/Lora-Regular.woff2') format('woff2'),
+  url('/fonts/Lora-Regular.woff') format('woff'),
+  url('/fonts/Lora-Regular.ttf') format('truetype'),
+  url('/fonts/Lora-Regular.svg#Lora-Regular') format('svg'),
+  url('/fonts/Lora-Regular.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Menlo-Regular';
+  src: url('/fonts/Menlo-Regular.eot');
+  src: url('/fonts/Menlo-Regular.woff2') format('woff2'),
+  url('/fonts/Menlo-Regular.woff') format('woff'),
+  url('/fonts/Menlo-Regular.ttf') format('truetype'),
+  url('/fonts/Menlo-Regular.svg#Menlo-Regular') format('svg'),
+  url('/fonts/Menlo-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 // Families
 $ft-fm--en: Lora-Regular;
@@ -24,9 +34,10 @@ $ft-fm--local: sans-serif;
 $ft-fm-def: $ft-fm--en, $ft-fm--cn, $ft-fm--local;
 $ft-fm-quote: $ft-fm--en, $ft-fm--cn-quote, $ft-fm--local;
 
-$ft-fm-code: Consolas, "Courier New", Courier;
+$ft-fm-code: Menlo-Regular, Consolas, "Courier New", Courier;
 
-
+//简书
+$ft-fm: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 
 
 

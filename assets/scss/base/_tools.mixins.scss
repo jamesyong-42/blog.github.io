@@ -70,9 +70,9 @@
     p {
       color: $clr3;
     }
-    em {
-      color: $clr-def-darker;
-    }
+    //em {
+    //  color: $clr-def-darker;
+    //}
   }
   .post__title {
     border-bottom-color: $clr2;
@@ -83,7 +83,30 @@
   .loading__wave {
     @include linearGradient3(90deg, rgba(0, 0, 0, 0), $clr1)
   }
+  #mask {
+    background: $clr2;
+  }
   //.loading__wave-bg {
   //  background-color: $clr1;
   //}
+}
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+
+    &.#{$theme} {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+
+  }
+}
+@function themed($key) {
+  @return map-get($theme-map, $key);
 }

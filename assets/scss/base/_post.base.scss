@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #POST-BASE
+\*------------------------------------*/
+
+.blog__container {
+  @include themify($themes) {
+    @include linearGradient($clr-gr-deg, themed('clr-primary-light'), themed('clr-primary-dark'));
+    h1 {
+      color: themed('clr-primary-lightest');
+    }
+    h2, h3, h4, h5, h6 {
+      color: themed('clr-dark');
+    }
+    p {
+      color: themed('clr-light');
+    }
+    ::selection {
+      background-color: themed('clr-primary-dark');
+    }
+
+    .post__title {
+      border-bottom-color: themed('clr-primary-dark');
+    }
+    //.loading__placeholder {
+    //  background-color: themed('clr-primary-dark');
+    //}
+    //.loading__wave {
+    //  @include linearGradient3(90deg, rgba(0, 0, 0, 0), themed('clr-primary-light'))
+    //}
+    #mask {
+      background: themed('clr-primary-dark');
+    }
+    .PostLoading__Placeholder {
+      background-color: themed('clr-primary-dark');
+    }
+    .PostLoading__Wave {
+      @include linearGradient3(90deg, rgba(0, 0, 0, 0), themed('clr-primary-light'))
+    }
+  }
+
+}

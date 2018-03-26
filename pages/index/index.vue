@@ -130,7 +130,7 @@
       addClass(target, 'blog__list__item__content--active')
 
       const scrollBar = this.$store.state.scrollBar
-      const contEl = scrollBar.containerEl
+
       let that = this
       setTimeout(() => {
 

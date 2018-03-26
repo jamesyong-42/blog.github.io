@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    #POST-QUOTES
+\*------------------------------------*/
+.blog__container {
+
+  blockquote {
+    margin: 20px 0;
+    padding: 1em 1.5em;
+    border-style: solid;
+    border-width: 0px 1px 0px 7px;
+    font-size: $ft-sz-qt;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: '“';
+      width: 20px;
+      padding: 0 10px 10px;
+      height: 30px;
+      font-size: 60px;
+      font-weight: bold;
+      position: absolute;
+      left: -50px;
+      top: 0;
+      // background-color: white;
+      // box-shadow: 0px 0px 5px 1px rgba(200, 200, 200, 0.5);
+      z-index: -10;
+    }
+
+    p {
+      text-indent: 0;
+      line-height: 1.75em;
+      text-shadow: none;
+      font-family: $ft-fm-quote;
+      font-size: $ft-sz-qt;
+      word-wrap: break-word;
+    }
+
+    h2, h3, h4, h5, h6 {
+      // text-shadow: $sd-qt-h2-6;
+    }
+
+    em {
+
+    }
+
+
+  }
+
+
+  @include themify($themes) {
+    blockquote {
+      background-color: themed('clr-light');
+      border-color: themed('clr-dark');
+      color: themed('clr-dark');
+      p {
+        color: themed('clr-dark');
+      }
+      em {
+        color: $clr-def-darker;
+      }
+    }
+  }
+}
+
+
+

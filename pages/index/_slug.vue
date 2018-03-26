@@ -1,7 +1,7 @@
 <template>
   <div class="post">
-    <nuxt-link id="return-btn" :to="'/'"><i class="fa fa-angle-left"></i></nuxt-link>
-    <div id="mask">
+    <nuxt-link id="return-btn" class="Post__ReturnBtn" :to="'/'"><i class="fa fa-angle-left"></i></nuxt-link>
+    <div id="mask" class="Post__HeadMask">
       <!--<h1>{{title}}</h1>-->
       <!--<div v-html="body"></div>-->
       <div class="mask__double"
@@ -64,8 +64,8 @@
         this.$store.commit('setScrollBar', scrollBar)
       }
       this.$store.commit('setPostLoading', false)
-      this.returnBtn = document.getElementById('return-btn')
-      this.mask = document.getElementById('mask')
+      this.returnBtn = document.querySelector('.Post__ReturnBtn')
+      this.mask = document.querySelector('.Post__HeadMask')
       this.$store.state.scrollBar.addListener(this.freezeReturnBtn)
     },
     beforeRouterLeave () {
@@ -111,7 +111,7 @@
     height: 200px;
     left: 0;
     z-index: 998;
-    background: white;
+
     top: -130px;
     overflow: hidden;
 

@@ -1,7 +1,87 @@
-@import "settings.fonts";
-@import "document";
-@import "settings.colors";
-@import "components.scrollbar";
+/**
+ *
+ * CONTENTS
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * SETTINGS
+
+ * Colors...............Manage our color palette in isolation.
+ * Fonts................Font families and styles.
+ * Base...............Manage our color palette in isolation.
+ * Images...............Image styles.
+ * Shadows..............Text shadows and box shadows.
+ *
+ * BASE
+ * Links................Link settings.
+ * Page.................HTML, * settings.
+ * Head.................H1-6, page title, and subtitle styles.
+ * Quotes...............Blockquotes and code styles.
+ * Paragraph............Paragraph styles.
+ * Text.................Links, lists and other styles.
+ *
+ * POST
+ * Themes
+ * Base
+ * Quotes
+ * Syntax
+
+ * COMPONENTS
+ * Tao..................Tao element styles in Home page.
+ * Papers...............Paper effect styles.
+ * Nav..................Navigator styles.
+ * Tag..................Tag and paging stlyes.
+ * License..............License and about author styles.
+ * Social...............Follow and share styles.
+ * Series...............Series styles.
+ * Footer...............The main page footer.
+ * Others...............Specific id and class styles.
+ *
+ * DEVICE
+ * Mobile...............Styles on mobile devices.
+ */
+
+
+/*------------------------------------*\
+    #TOOLS
+\*------------------------------------*/
+
 @import "tools.mixins";
-@import "base.quotes";
+
+/*------------------------------------*\
+    #SETTINGS
+\*------------------------------------*/
+
+@import "settings.fonts";
+@import "settings.colors";
+@import "settings.base";
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+
+@import "components.scrollbar";
+
+/*------------------------------------*\
+    #POST
+\*------------------------------------*/
+
+@import "post.themes";
+@import "post.base";
+@import "post.quotes";
+@import "post.syntax";
+
+
+/*------------------------------------*\
+    #DEVICE
+\*------------------------------------*/
+
+
+
+
+
+
+
+
 

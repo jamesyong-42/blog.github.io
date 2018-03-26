@@ -7,35 +7,38 @@
            :class="$store.state.curPostStyle">
         <nuxt-child/>
       </div>
-      <div
-            class="blog__container loading"
-           :class="[`${$store.state.curPostStyle}`, $store.state.postLoading ? 'loading--on' : '']">
-        <div class="loading__wave"></div>
-        <!--<div class="loading__wave-bg"></div>-->
+      <post-loading class="blog__container"></post-loading>
+      <!--<div-->
+            <!--class="blog__container loading"-->
+           <!--:class="[`${$store.state.curPostStyle}`, $store.state.postLoading ? 'loading&#45;&#45;on' : '']">-->
+        <!--<div class="loading__wave"></div>-->
+        <!--&lt;!&ndash;<div class="loading__wave-bg"></div>&ndash;&gt;-->
 
-        <div class="loading__placeholder loading__placeholder--title"></div>
+        <!--<div class="loading__placeholder loading__placeholder&#45;&#45;title"></div>-->
 
-        <div class="loading__placeholder loading__placeholder--p-m"></div>
-        <div class="loading__placeholder loading__placeholder--p-s"></div>
-        <div class="loading__placeholder loading__placeholder--p-m"></div>
-        <div class="loading__placeholder loading__placeholder--p-l"></div>
-        <div class="loading__placeholder loading__placeholder--p-m"></div>
-        <div class="loading__placeholder loading__placeholder--p-l"></div>
-        <div class="loading__placeholder loading__placeholder--p-l"></div>
-        <div class="loading__placeholder loading__placeholder--p-m"></div>
-        <div class="loading__placeholder loading__placeholder--p-l"></div>
-      </div>
+        <!--<div class="loading__placeholder loading__placeholder&#45;&#45;p-m"></div>-->
+        <!--<div class="loading__placeholder loading__placeholder&#45;&#45;p-s"></div>-->
+        <!--<div class="loading__placeholder loading__placeholder&#45;&#45;p-m"></div>-->
+        <!--<div class="loading__placeholder loading__placeholder&#45;&#45;p-l"></div>-->
+        <!--<div class="loading__placeholder loading__placeholder&#45;&#45;p-m"></div>-->
+        <!--<div class="loading__placeholder loading__placeholder&#45;&#45;p-l"></div>-->
+        <!--<div class="loading__placeholder loading__placeholder&#45;&#45;p-l"></div>-->
+        <!--<div class="loading__placeholder loading__placeholder&#45;&#45;p-m"></div>-->
+        <!--<div class="loading__placeholder loading__placeholder&#45;&#45;p-l"></div>-->
+      <!--</div>-->
     </div>
   </section>
 </template>
 
 <script>
 import Background from '~/components/Background.vue'
+import PostLoading from '~/components/PostLoading.vue'
 import Scrollbar from 'smooth-scrollbar'
 
 export default {
   components: {
-    Background
+    Background,
+    PostLoading
   },
   data () {
     return {
@@ -69,9 +72,7 @@ export default {
 
 <style lang="scss">
   @import "~assets/scss/main.scss";
-  html {
-    overflow: hidden;
-  }
+
   .container {
     width: 100vw;
     height: 100vh;
@@ -119,32 +120,32 @@ export default {
       color: $clr-h1;
     }
     &.style1 {
-      @include linearGradient($clr-gr-deg, $clr-1-1, $clr-1-2);
-      @include blogTextColorTheme($clr-1-1, $clr-1-2, $clr-1-3, $clr-1-p);
+      // @include linearGradient($clr-gr-deg, $clr-1-1, $clr-1-2);
+      // @include blogTextColorTheme($clr-1-1, $clr-1-2, $clr-1-3, $clr-1-p);
     }
     &.style2 {
-      @include linearGradient($clr-gr-deg, $clr-2-1, $clr-2-2);
-      @include blogTextColorTheme($clr-2-1, $clr-2-2, $clr-2-3, $clr-2-p);
+      // @include linearGradient($clr-gr-deg, $clr-2-1, $clr-2-2);
+      // @include blogTextColorTheme($clr-2-1, $clr-2-2, $clr-2-3, $clr-2-p);
     }
     &.style3 {
-      @include linearGradient($clr-gr-deg, $clr-3-1, $clr-3-2);
-      @include blogTextColorTheme($clr-3-1, $clr-3-2, $clr-3-3, $clr-3-p);
+      // @include linearGradient($clr-gr-deg, $clr-3-1, $clr-3-2);
+      // @include blogTextColorTheme($clr-3-1, $clr-3-2, $clr-3-3, $clr-3-p);
     }
     &.style4 {
-      @include linearGradient($clr-gr-deg, $clr-4-1, $clr-4-2);
-      @include blogTextColorTheme($clr-4-1, $clr-4-2, $clr-4-3, $clr-4-p);
+      // @include linearGradient($clr-gr-deg, $clr-4-1, $clr-4-2);
+      // @include blogTextColorTheme($clr-4-1, $clr-4-2, $clr-4-3, $clr-4-p);
     }
     &.style5 {
-      @include linearGradient($clr-gr-deg, $clr-5-1, $clr-5-2);
-      @include blogTextColorTheme($clr-5-1, $clr-5-2, $clr-5-3, $clr-5-p);
+      // @include linearGradient($clr-gr-deg, $clr-5-1, $clr-5-2);
+      // @include blogTextColorTheme($clr-5-1, $clr-5-2, $clr-5-3, $clr-5-p);
     }
     &.style6 {
-      @include linearGradient($clr-gr-deg, $clr-6-1, $clr-6-2);
-      @include blogTextColorTheme($clr-6-1, $clr-6-2, $clr-6-3, $clr-6-p);
+      // @include linearGradient($clr-gr-deg, $clr-6-1, $clr-6-2);
+      // @include blogTextColorTheme($clr-6-1, $clr-6-2, $clr-6-3, $clr-6-p);
     }
     &.style7 {
-      @include linearGradient($clr-gr-deg, $clr-7-1, $clr-7-2);
-      @include blogTextColorTheme($clr-7-1, $clr-7-2, $clr-7-3, $clr-7-p);
+      // @include linearGradient($clr-gr-deg, $clr-7-1, $clr-7-2);
+      // @include blogTextColorTheme($clr-7-1, $clr-7-2, $clr-7-3, $clr-7-p);
     }
   }
 
@@ -173,14 +174,14 @@ export default {
       left: 65px;
       z-index: 999;
     }
-    /*&__wave-bg {*/
-      /*width: calc(100% - 130px);*/
-      /*height: calc(100% - 130px);*/
-      /*position: absolute;*/
-      /*top: 65px;*/
-      /*left: 65px;*/
-      /*z-index: 997;*/
-    /*}*/
+    &__wave-bg {
+      width: calc(100% - 130px);
+      height: calc(100% - 130px);
+      position: absolute;
+      top: 65px;
+      left: 65px;
+      z-index: 997;
+    }
     &__placeholder {
       /*background-size: 1600px 100%;*/
       /*-webkit-animation: loadingAni 1s linear infinite;*/
@@ -211,18 +212,18 @@ export default {
       }
     }
   }
-  @-webkit-keyframes loadingAni {
-    0%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-  }
-  @-moz-keyframes loadingAni {
-    0%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-  }
-  @keyframes loadingAni {
-    0%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-  }
+  /*@-webkit-keyframes loadingAni {*/
+    /*0%{background-position:100% 50%}*/
+    /*100%{background-position:0% 50%}*/
+  /*}*/
+  /*@-moz-keyframes loadingAni {*/
+    /*0%{background-position:100% 50%}*/
+    /*100%{background-position:0% 50%}*/
+  /*}*/
+  /*@keyframes loadingAni {*/
+    /*0%{background-position:100% 50%}*/
+    /*100%{background-position:0% 50%}*/
+  /*}*/
 
 
 </style>
