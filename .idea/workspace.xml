@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1ccc69d-bcf8-4bdd-a77a-55a7b0d3ea83" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/CNAME" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/200.html" afterPath="$PROJECT_DIR$/dist/200.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/_nuxt/app.acf93b4d206a7d6d0188.js" afterPath="$PROJECT_DIR$/dist/_nuxt/app.acf93b4d206a7d6d0188.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-    </list>
+    <list default="true" id="b1ccc69d-bcf8-4bdd-a77a-55a7b0d3ea83" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -56,8 +50,8 @@
       <file leaf-file-name="app.acf93b4d206a7d6d0188.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dist/_nuxt/app.acf93b4d206a7d6d0188.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="0" column="10649" lean-forward="false" selection-start-line="0" selection-start-column="10649" selection-end-line="0" selection-end-column="10649" />
+            <state relative-caret-position="426">
+              <caret line="0" column="12014" lean-forward="false" selection-start-line="0" selection-start-column="12014" selection-end-line="0" selection-end-column="12014" />
               <folding />
             </state>
           </provider>
@@ -519,7 +513,7 @@
       <workItem from="1522089364463" duration="39000" />
       <workItem from="1522089434777" duration="1726000" />
       <workItem from="1522123060447" duration="3530000" />
-      <workItem from="1522154993939" duration="4077000" />
+      <workItem from="1522154993939" duration="4118000" />
     </task>
     <task id="LOCAL-00001" summary="building up">
       <created>1521885830840</created>
@@ -567,13 +561,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165735000" />
+    <option name="totallyTimeSpent" value="165776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="699" y="234" width="2128" height="1038" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20309478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20309478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938856" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -949,8 +942,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/_nuxt/app.acf93b4d206a7d6d0188.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="0" column="10649" lean-forward="false" selection-start-line="0" selection-start-column="10649" selection-end-line="0" selection-end-column="10649" />
+        <state relative-caret-position="426">
+          <caret line="0" column="12014" lean-forward="false" selection-start-line="0" selection-start-column="12014" selection-end-line="0" selection-end-column="12014" />
           <folding />
         </state>
       </provider>
