@@ -54,6 +54,11 @@ module.exports = {
       }
     }
   },
+  generate: {
+    minify: {
+      collapseWhitespace: false
+    }
+  },
   plugins: [
     {src: '~/plugins/overscroll', ssr: false} //set ssr:false fix 'SyntaxError: Unexpected token import'
   ],

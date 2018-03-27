@@ -33,7 +33,7 @@
   var tmp = ''
   export default {
     async asyncData (context) {
-      console.log('111')
+      // console.log('111')
 //      let client = context.app.apolloProvider.defaultClient
 //      client.query({
 //        query: fetchPosts,
@@ -51,12 +51,8 @@
     },
     beforeRouteEnter (to, from, next) {
       console.log('beforeRouteEnter')
-      console.log(next)
       tmp = from.fullPath
-//      next(vm => {
-//        console.log('beforeRouteEnter')
-//        vm.routeFrom = from.fullPath
-//      })
+      console.log('beforeRouteEnter')
       next()
     },
     beforeCreate () {
@@ -69,18 +65,13 @@
       this.routeFrom = tmp
       tmp = ''
 
-//      const scrollBar = this.$store.state.scrollBar
-//      if (scrollBar) {
-//        const contEl = scrollBar.containerEl
-//        contEl.className = 'blog__container'
-//      }
       this.$store.state.curPostStyle = ''
       console.log('beforeMount')
     },
     mounted () {
       const that = this
       setTimeout(() => {
-        console.log(that.routeFrom)
+        // console.log(that.routeFrom)
         that.routeFrom = ''
       }, 500)
       console.log('mounted')
@@ -142,7 +133,7 @@
 
 
       this.$store.commit('setScrollPos', scrollBar.offset.y)
-      console.log('llllllllleeeeve', this.$route.path, to)
+      // console.log('llllllllleeeeve', this.$route.path, to)
       // this.routeTo = to.fullPath
 
     },

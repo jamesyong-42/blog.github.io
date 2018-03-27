@@ -50,12 +50,12 @@ const store = () => new Vuex.Store({
   actions: {
     async nuxtServerInit({commit}, context) {
       let client = context.app.apolloProvider.defaultClient
-      console.log('iiiiiii', context)
+      // console.log('iiiiiii', context)
       const res = await client.query({
         query: QUERY_POSTS,
         variables: {
           owner: 'Sakilove',
-          name: 'blog',
+          name: 'blog.github.io',
           last: 26
         }
       })

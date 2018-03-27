@@ -42,7 +42,7 @@
       data.body = res.data.node.bodyHTML
       data.title = res.data.node.title
       data.label = res.data.node.labels.edges[0].node.description
-      console.log(data.body)
+      // console.log(data.body)
       return data
     },
     components: {
