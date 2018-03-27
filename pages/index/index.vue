@@ -5,8 +5,7 @@
         <div :id="'item-' + index" :key="index" class="blog__list__item">
           <div class="blog__list__item__content"
                :data-labelstyle="post.node.labels.edges[0].node.description"
-               :class="[`blog__list__item__content--${post.node.labels.edges[0].node.description}`,
-               routeFrom === `/${index}-${post.node.title}` ? 'blog__list__item__content--inactive' : '']">
+               :class="[`blog__list__item__content--${post.node.labels.edges[0].node.description}`]">
             <!--<a @click="blogClick(post.node.id, post.node.title)">{{ post.node.title }}</a>-->
             <nuxt-link :to="`/${index}-${post.node.title}`">{{ post.node.title }}</nuxt-link>
             <!--<i :class="`blog__list__item__content__icon ${post.node.labels.edges[0].node.name}`"></i>-->
@@ -29,30 +28,26 @@
     obj.className = added
     // 替换原来的 class.
   }
+  function removeClass (obj, cls) {
+    var objClass = ' ' + obj.className + ' '
+    // 获取 class 内容, 并在首尾各加一个空格. ex) 'abc        bcd' -> ' abc        bcd '
+    objClass = objClass.replace(/(\s+)/gi, ' ')
+    // 将多余的空字符替换成一个空格. ex) ' abc        bcd ' -> ' abc bcd '
+    var removed = objClass.replace(' ' + cls + ' ', ' ')
+    // 在原来的 class 替换掉首尾加了空格的 class. ex) ' abc bcd ' -> 'bcd '
+    removed = removed.replace(/(^\s+)|(\s+$)/g, '')
+    // 去掉首尾空格. ex) 'bcd ' -> 'bcd'
+    obj.className = removed
+    // 替换原来的 class.
+  }
   //fix hack: beforeRouterEnter(){next(vm => {this is after mounted!!!I need it before mount to make animation smooth})}
-  var tmp = ''
+  // var tmp = ''
   export default {
-    async asyncData (context) {
-      // console.log('111')
-//      let client = context.app.apolloProvider.defaultClient
-//      client.query({
-//        query: fetchPosts,
-//        variables: {
-//          owner: 'Sakilove',
-//          name: 'blog',
-//          last: 20
-//        }
-//      }).then(res => {
-//        console.log(res)
-//        context.store.commit('setPosts', res.data.repository.issues.edges)
-//      }).catch(err => {
-//        console.log(err)
-//      })
-    },
+
     beforeRouteEnter (to, from, next) {
       console.log('beforeRouteEnter')
-      tmp = from.fullPath
-      console.log('beforeRouteEnter')
+      // tmp = from.fullPath
+      // console.log('beforeRouteEnter')
       next()
     },
     beforeCreate () {
@@ -62,41 +57,66 @@
       console.log('created')
     },
     beforeMount () {
-      this.routeFrom = tmp
-      tmp = ''
+      // this.routeFrom = tmp
+      // tmp = ''
 
-      this.$store.state.curPostStyle = ''
+      this.$store.commit('setCurPostStyle', '')
+      this.$store.commit('setCurPost', null)
       console.log('beforeMount')
     },
     mounted () {
-      const that = this
-      setTimeout(() => {
-        // console.log(that.routeFrom)
-        that.routeFrom = ''
-      }, 500)
-      console.log('mounted')
-
-      const scrollBar = this.$store.state.scrollBar
-      if (scrollBar) {
-        const scrollPos = this.$store.state.scrollPos
-        if (scrollPos === -1) {
-          if (this.routeFrom.length > 2) {
-            const s = this.routeFrom.slice(1)
-            const i = s.split('-')[0]
-            const target = document.getElementById('item-' + i)
-            scrollBar.update()
-            scrollBar.scrollIntoView(target, {
-              offsetLeft: target.offsetLeft + 20,
+      if (this.$store.state.browseHistory.hasHistory) {
+        const index = this.$store.state.browseHistory.postIndex
+        const targetCont = document.getElementById('item-' + index)
+        const target = targetCont.childNodes[0]
+        addClass(target, 'blog__list__item__content--inactive')
+        target.addEventListener('animationend', () => {
+          removeClass(target, 'blog__list__item__content--inactive')
+        })
+        if (this.$store.state.browseHistory.scrollPos) {
+          const scrollBar = this.$store.state.scrollBar
+          scrollBar.update() //force update since content change!!
+          scrollBar.setPosition(0, this.$store.state.browseHistory.scrollPos)
+        } else {
+          const scrollBar = this.$store.state.scrollBar
+          scrollBar.update()
+          scrollBar.scrollIntoView(targetCont, {
+            offsetLeft: targetCont.offsetLeft + 20,
 //              offsetBottom: 12,
 //              alignToTop: false,
-              onlyScrollIfNeeded: false})
-          }
-        } else {
-          scrollBar.update() //force update since content change!!
-          scrollBar.setPosition(0, scrollPos)
-          // console.log('scrollPos', scrollPos, scrollBar)
+            onlyScrollIfNeeded: false})
+
         }
       }
+
+//      const that = this
+//      setTimeout(() => {
+//        // console.log(that.routeFrom)
+//        that.routeFrom = ''
+//      }, 500)
+//      console.log('mounted')
+//
+//      const scrollBar = this.$store.state.scrollBar
+//      if (scrollBar) {
+//        const scrollPos = this.$store.state.scrollPos
+//        if (scrollPos === -1) {
+//          if (this.routeFrom.length > 2) {
+//            const s = this.routeFrom.slice(1)
+//            const i = s.split('-')[0]
+//            const target = document.getElementById('item-' + i)
+//            scrollBar.update()
+//            scrollBar.scrollIntoView(target, {
+//              offsetLeft: target.offsetLeft + 20,
+//              offsetBottom: 12,
+//              alignToTop: false,
+//              onlyScrollIfNeeded: false})
+//          }
+//        } else {
+//          scrollBar.update() //force update since content change!!
+//          scrollBar.setPosition(0, scrollPos)
+//          // console.log('scrollPos', scrollPos, scrollBar)
+//        }
+//      }
 
     },
     beforeUpdate () {
@@ -115,6 +135,7 @@
     beforeRouteLeave (to, from, next) {
       const str = to.fullPath.slice(1)
       const index = str.split('-')[0]
+
       const target = document.getElementById('item-' + index).childNodes[0]
       const labelstyle = target.dataset.labelstyle
       this.$store.commit('setCurPostEl', target)
@@ -124,15 +145,19 @@
 
       let that = this
       setTimeout(() => {
-
         that.$store.commit('setCurPostStyle', labelstyle)
         that.$store.commit('setPostLoading', true)
-        setTimeout(() => {next()}, 500)
+        setTimeout(() => {
+          that.$store.commit('setBrowseHistory', parseInt(index), scrollBar.offset.y)
+          next()
+        }, 500)
       }, 500)
 
 
+      // this.$store.commit('setScrollPos', scrollBar.offset.y)
 
-      this.$store.commit('setScrollPos', scrollBar.offset.y)
+
+
       // console.log('llllllllleeeeve', this.$route.path, to)
       // this.routeTo = to.fullPath
 

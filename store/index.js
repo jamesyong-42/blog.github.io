@@ -9,11 +9,18 @@ const store = () => new Vuex.Store({
     posts: [],
     postIDs: [],
     infoShow: false,
+    postShow: false,
+    curPost: null,
     postLoading: false,
     curPostEl: {},
     curPostStyle: '',
     scrollBar: null,
-    scrollPos: -1
+    scrollPos: -1,
+    browseHistory: {
+      hasHistory: false,
+      postIndex: -1,
+      scrollPos: null
+    }
   },
   mutations: {
     setLocale(state, locale) {
@@ -34,6 +41,12 @@ const store = () => new Vuex.Store({
     setInfoShow(state, infoShow) {
       state.infoShow = infoShow
     },
+    setPostShow(state, postShow) {
+      state.postShow = postShow
+    },
+    setCurPost(state, curPost) {
+      state.curPost = curPost
+    },
     setCurPostEl(state, curPostEl) {
       state.curPostEl = curPostEl
     },
@@ -45,6 +58,11 @@ const store = () => new Vuex.Store({
     },
     setScrollPos(state, scrollPos) {
       state.scrollPos = scrollPos
+    },
+    setBrowseHistory(state, postIndex, scrollPos) {
+      state.browseHistory.hasHistory = true
+      state.browseHistory.postIndex = postIndex
+      state.browseHistory.scrollPos = scrollPos
     }
   },
   actions: {

@@ -23,25 +23,31 @@
       // Default data
       let client = app.apolloProvider.defaultClient
       let data = {
-        post: {},
         title: '',
         body: '',
         label: '',
         returnBtn: {},
-        mask: {}
+        mask: {},
+        index: -1
       }
       const slug = route.params.slug
-      const num = parseInt(slug.split('-')[0])
+      const index = parseInt(slug.split('-')[0])
+      const post = store.state.posts[index].node
+      const curStyle = post.labels.edges[0].node.description
+      const id = post.id
+      // console.log('!!!!!', store.state)
+      store.commit('setCurPostStyle', curStyle)
+      store.commit('setCurPost', post)
       const res = await client.query({
         query: QUERY_POST,
         variables: {
-          id: store.state.postIDs[num]
+          id: id
         }
       })
-      data.post = res
+      data.index = index
       data.body = res.data.node.bodyHTML
       data.title = res.data.node.title
-      data.label = res.data.node.labels.edges[0].node.description
+      data.label = res.data.node.labels.edges[0].node.name
       // console.log(data.body)
       return data
     },
@@ -57,6 +63,10 @@
 
     },
     mounted () {
+      if (!this.$store.state.browseHistory.hasHistory) {
+        this.$store.commit('setBrowseHistory', this.index, null)
+      }
+
       let scrollBar = this.$store.state.scrollBar
       if (!scrollBar) {
         scrollBar = Scrollbar.init(document.querySelector('.blog__container'), this.scrollBarOptions)
