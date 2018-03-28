@@ -68,7 +68,7 @@ const store = () => new Vuex.Store({
   actions: {
     async nuxtServerInit({commit}, context) {
       let client = context.app.apolloProvider.defaultClient
-      // console.log('iiiiiii', context)
+      console.log('!!!nuxtServerInit st')
       const res = await client.query({
         query: QUERY_POSTS,
         variables: {
@@ -84,6 +84,7 @@ const store = () => new Vuex.Store({
       let lebels = res.data.repository.labels.edges.map(d => d.node.name)
       lebels.splice(lebels.indexOf('Yong'), 1)
       commit('setLabels', lebels)
+      console.log('!!!nuxtServerInit en')
     }
   }
 })

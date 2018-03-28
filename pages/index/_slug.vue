@@ -19,6 +19,12 @@
   import QUERY_POST from '~/apollo/graphql/post.gql'
   import Scrollbar from 'smooth-scrollbar'
   export default {
+    beforeRouteEnter (to, from, next) {
+      console.log('beforeRouteEnter' + from.fullPath)
+      // tmp = from.fullPath
+      // console.log('beforeRouteEnter')
+      next()
+    },
     async asyncData({ app, route, store, error }) {
       // Default data
       let client = app.apolloProvider.defaultClient
@@ -35,7 +41,7 @@
       const post = store.state.posts[index].node
       const curStyle = post.labels.edges[0].node.description
       const id = post.id
-      // console.log('!!!!!', store.state)
+      console.log('post async st!!!!!', store.state)
       store.commit('setCurPostStyle', curStyle)
       store.commit('setCurPost', post)
       const res = await client.query({
@@ -49,6 +55,7 @@
       data.title = res.data.node.title
       data.label = res.data.node.labels.edges[0].node.name
       // console.log(data.body)
+      console.log('post async en!!!!!', store.state)
       return data
     },
     components: {

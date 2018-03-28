@@ -45,7 +45,7 @@
   export default {
 
     beforeRouteEnter (to, from, next) {
-      console.log('beforeRouteEnter')
+      console.log('beforeRouteEnter' + from.fullPath)
       // tmp = from.fullPath
       // console.log('beforeRouteEnter')
       next()

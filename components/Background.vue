@@ -2555,9 +2555,7 @@
     },
     computed: {
     },
-
     mounted () {
-
       const bg = document.getElementById('bg-container')
       new Parallax(bg)
     },

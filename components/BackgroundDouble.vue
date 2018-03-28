@@ -2552,9 +2552,7 @@
     },
     computed: {
     },
-
     mounted () {
-
       const bg = document.getElementById('bg-container-double')
       new Parallax(bg)
     },
