@@ -2,9 +2,9 @@
   <section class="container">
     <background></background>
     <div class="sub-container">
-      <img class="ribben" src="/ribben.svg" @click="infoOpen"/>
+      <img class="ribben" src="/ribben.svg" @click="toggleSidePanel"/>
 
-      <side-panel></side-panel>
+      <side-panel v-if="$store.state.sidePanelShow"></side-panel>
       <div class="blog__container"
            :class="$store.state.curPostStyle">
         <nuxt-child/>
@@ -53,8 +53,8 @@ export default {
 
   },
   methods: {
-    infoOpen () {
-      this.$store.commit('setInfoShow', true)
+    toggleSidePanel () {
+      this.$store.commit('toggleSidePanel')
     }
   }
 }

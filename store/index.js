@@ -9,6 +9,7 @@ const store = () => new Vuex.Store({
     posts: [],
     postIDs: [],
     infoShow: false,
+    sidePanelShow: false,
     postShow: false,
     curPost: null,
     postLoading: false,
@@ -40,6 +41,9 @@ const store = () => new Vuex.Store({
     },
     setInfoShow(state, infoShow) {
       state.infoShow = infoShow
+    },
+    toggleSidePanel(state) {
+      state.sidePanelShow = !state.sidePanelShow
     },
     setPostShow(state, postShow) {
       state.postShow = postShow

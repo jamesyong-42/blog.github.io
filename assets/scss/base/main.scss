@@ -9,6 +9,7 @@
 
  * Colors...............Manage our color palette in isolation.
  * Fonts................Font families and styles.
+ * Paragraph................Font families and styles.
  * Base...............Manage our color palette in isolation.
  * Images...............Image styles.
  * Shadows..............Text shadows and box shadows.
@@ -52,9 +53,9 @@
 /*------------------------------------*\
     #SETTINGS
 \*------------------------------------*/
-
-@import "settings.fonts";
 @import "settings.colors";
+@import "settings.fonts";
+@import "settings.paragraph";
 @import "settings.base";
 
 /*------------------------------------*\

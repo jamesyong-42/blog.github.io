@@ -6,7 +6,7 @@
   @include themify($themes) {
     @include linearGradient($clr-gr-deg, themed('clr-primary-light'), themed('clr-primary-dark'));
     h1 {
-      color: themed('clr-primary-lightest');
+      color: themed('clr-lightest');
     }
     h2, h3, h4, h5, h6 {
       color: themed('clr-dark');
@@ -19,6 +19,7 @@
     }
 
     .post__title {
+      color: themed('clr-lightest');
       border-bottom-color: themed('clr-primary-dark');
     }
     //.loading__placeholder {
@@ -39,3 +40,25 @@
   }
 
 }
+
+
+
+.blog__list__item__content {
+  @include themify($themes) {
+    @include linearGradient($clr-gr-deg, themed('clr-primary-light'), themed('clr-primary-dark'));
+    .icon {
+      display: inline-block;
+      width: 30%;
+      height: 30%;
+      stroke-width: 0;
+      position: absolute;
+      right: 15%;
+      bottom: 15%;
+      stroke: none;
+      fill: themed('clr-dark');
+    }
+  }
+
+}
+
+

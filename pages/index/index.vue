@@ -5,9 +5,10 @@
         <div :id="'item-' + index" :key="index" class="blog__list__item">
           <div class="blog__list__item__content"
                :data-labelstyle="post.node.labels.edges[0].node.description"
-               :class="[`blog__list__item__content--${post.node.labels.edges[0].node.description}`]">
+               :class="post.node.labels.edges[0].node.description">
             <!--<a @click="blogClick(post.node.id, post.node.title)">{{ post.node.title }}</a>-->
             <nuxt-link :to="`/${index}-${post.node.title}`">{{ post.node.title }}</nuxt-link>
+            <svg :class="`icon icon-${post.node.labels.edges[0].node.name}`"><use :xlink:href="`#icon-${post.node.labels.edges[0].node.name}`"></use></svg>
             <!--<i :class="`blog__list__item__content__icon ${post.node.labels.edges[0].node.name}`"></i>-->
           </div>
         </div>
@@ -206,9 +207,6 @@
 </script>
 
 <style lang="scss">
-  $fa-font-path: "~font-awesome/fonts";
-  @import "~font-awesome/scss/font-awesome";
-  @import "~assets/scss/main.scss";
   .blog__list {
     width: 100%;
     display: flex;
@@ -263,8 +261,8 @@
           > a {
             color: transparent;
           }
-          &:before {
-            display: none;
+          .icon {
+            opacity: 0;
           }
         }
         &--inactive {
@@ -281,7 +279,7 @@
             animation-duration: 0.1s;
             animation-timing-function: ease;
           }
-          &:before {
+          .icon {
             animation-delay: 0.5s;
             animation-fill-mode: backwards;
             animation-name: opacitySwitch;
@@ -289,98 +287,6 @@
             animation-timing-function: ease;
           }
         }
-        &--style1 {
-          @include linearGradient($clr-gr-deg, $clr-1-1, $clr-1-2);
-          &:before {
-            font-family: FontAwesome;
-            font-size: 4rem;
-            content: $fa-var-tv;
-            position: absolute;
-            right: 15%;
-            bottom: 15%;
-            z-index: 98;
-            color: $clr-1-3;
-          }
-        }
-        &--style2 {
-          @include linearGradient($clr-gr-deg, $clr-2-1, $clr-2-2);
-          &:before {
-            font-family: FontAwesome;
-            font-size: 3.5rem;
-            content: $fa-var-film;
-            position: absolute;
-            right: 18%;
-            bottom: 18%;
-            z-index: 98;
-            color: $clr-2-3;
-          }
-        }
-        &--style3 {
-          @include linearGradient($clr-gr-deg, $clr-3-1, $clr-3-2);
-          &:before {
-            font-family: FontAwesome;
-            font-size: 4rem;
-            content: $fa-var-music;
-            position: absolute;
-            right: 15%;
-            bottom: 15%;
-            z-index: 98;
-            color: $clr-3-3;
-          }
-        }
-        &--style4 {
-          @include linearGradient($clr-gr-deg, $clr-4-1, $clr-4-2);
-          &:before {
-            font-family: FontAwesome;
-            font-size: 4rem;
-            content: $fa-var-code;
-            position: absolute;
-            right: 15%;
-            bottom: 15%;
-            z-index: 98;
-            color: $clr-4-3;
-          }
-        }
-        &--style5 {
-          @include linearGradient($clr-gr-deg, $clr-5-1, $clr-5-2);
-          &:before {
-            font-family: FontAwesome;
-            font-size: 4rem;
-            content: $fa-var-heart;
-            position: absolute;
-            right: 15%;
-            bottom: 15%;
-            z-index: 98;
-            color: $clr-5-3;
-          }
-        }
-        &--style6 {
-          @include linearGradient($clr-gr-deg, $clr-6-1, $clr-6-2);
-          &:before {
-            font-family: FontAwesome;
-            font-size: 4rem;
-            content: $fa-var-book;
-            position: absolute;
-            right: 15%;
-            bottom: 15%;
-            z-index: 98;
-            color: $clr-6-3;
-          }
-        }
-        &--style7 {
-          @include linearGradient($clr-gr-deg, $clr-7-1, $clr-7-2);
-          &:before {
-            font-family: FontAwesome;
-            font-size: 4rem;
-            content: $fa-var-globe;
-            position: absolute;
-            right: 15%;
-            bottom: 15%;
-            z-index: 98;
-            color: $clr-7-3;
-          }
-        }
-
       }
     }
   }

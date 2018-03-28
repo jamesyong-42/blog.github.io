@@ -46,6 +46,7 @@ p {
   font-size: $ft-sz-def;
   line-height: 1.8em;
   margin: 1em 0;
+  text-indent: $te-in-p;
 }
 h1 {
   font-size: $ft-sz-h1;
@@ -70,4 +71,6 @@ h6 {
 }
 .post__title {
   font-size: $ft-sz-page-title;
+  padding: $pd-post-title;
+  margin: $mg-post-title;
 }

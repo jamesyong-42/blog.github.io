@@ -68,6 +68,7 @@
       &--title {
         width: 15%;
         height: $ft-sz-page-title;
+        padding: $pd-post-title;
       }
       &--h1 {
         width: 20%;

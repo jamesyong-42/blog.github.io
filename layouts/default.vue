@@ -1,24 +1,29 @@
 <template>
   <div>
+    <svg-icons></svg-icons>
     <nuxt :class="{'blur' : $store.state.infoShow}"/>
     <div v-if="$store.state.infoShow" class="info">
       <div class="info__content">
         <div class="info__content__close">
-          <i class="fa fa-close" @click="infoClose"></i>
+          <svg @click="infoClose" class="icon"><use xlink:href="#icon-remove" ></use></svg>
         </div>
         <div class="info__content__avatar"></div>
         <div class="info__content__intro">
           <h2>XXXXXXXXXXXXXXXXXXXXXXX</h2>
         </div>
         <div class="info__content__contact">
-          <i class="fa fa-heart"></i>
+          <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+  import SvgIcons from '~/components/SVGIcons.vue'
   export default {
+    components: {
+      SvgIcons
+    },
     data () {
       return {
       }
@@ -62,11 +67,22 @@
         margin: auto;
       }
       &__close {
-        > i {
+        .icon {
+          font-size: 3rem;
+          color: white;
           float: right;
           cursor: pointer;
         }
       }
     }
+  }
+
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
   }
 </style>

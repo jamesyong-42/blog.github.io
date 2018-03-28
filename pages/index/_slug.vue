@@ -1,6 +1,8 @@
 <template>
   <div class="post">
-    <nuxt-link id="return-btn" class="Post__ReturnBtn" :to="'/'"><i class="fa fa-angle-left"></i></nuxt-link>
+    <nuxt-link id="return-btn" class="Post__ReturnBtn" :to="'/'">
+      <svg class="icon icon-angle_left"><use xlink:href="#icon-angle_left"></use></svg>
+    </nuxt-link>
     <div id="mask" class="Post__HeadMask">
       <!--<h1>{{title}}</h1>-->
       <!--<div v-html="body"></div>-->
@@ -119,8 +121,8 @@
       will-change: transform;
       right: 45px;
       top: 30px;
-      > i {
-        font-size: 50px;
+      .icon {
+        font-size: 3rem;
         color: white;
       }
     }
@@ -145,6 +147,7 @@
   .mask__double {
     width: 100%;
     height: 80vh;
+    min-height: 480px;
     position: absolute;
     left: 0;
     top: 130px;

@@ -5,11 +5,11 @@
     </div>
     <div class="SidePanel__Content">
       <div class="SidePanel__Content__Head">
-        <img src="/logo.svg"/>
+        <img @click="infoOpen" src="/logo.svg"/>
       </div>
       <div class="SidePanel__Content__Middle"></div>
       <div class="SidePanel__Content__Bottom">
-        <vue-disqus shortname="tyrantax" :identifier="commentID" :title="commentID" url="http://blog.jamesyong42.com"></vue-disqus>
+        <vue-disqus shortname="tyrantax" :identifier="commentID" :title="commentTitle"></vue-disqus>
       </div>
     </div>
 
@@ -18,6 +18,7 @@
 <script>
   import BackgroundDouble from '~/components/BackgroundDouble.vue'
   import VueDisqus from 'vue-disqus/VueDisqus.vue'
+  import Scrollbar from 'smooth-scrollbar'
   export default {
     components: {
       BackgroundDouble,
@@ -25,7 +26,17 @@
     },
     data () {
       return {
-        sidePanelEl: {}
+        sidePanelEl: {},
+        scrollBarOptions: {
+          damping: 0.1,
+          thumbMinSize: 20,
+          alwaysShowTracks: false,
+          continuousScrolling: true,
+          plugins: {overscroll: { enable: true,
+            effect: 'bounce',
+            damping: 0.2,
+            maxOverscroll: 150}}
+        }
       }
     },
 //    beforeMount () {
@@ -33,6 +44,8 @@
 //      window.addEventListener('resize', this.sidePanelBGAdjust)
 //    },
     mounted () {
+      Scrollbar.init(document.querySelector('.SidePanel__Content__Bottom'), this.scrollBarOptions)
+      Scrollbar.detachStyle()
       this.sidePanelEl = document.querySelector('.SidePanel')
       window.addEventListener('resize', this.sidePanelBGAdjust)
       this.sidePanelBGAdjust ()
@@ -41,6 +54,13 @@
       commentID () {
         if (this.$store.state.curPost) {
           return this.$store.state.curPost.id
+        } else {
+          return 'main'
+        }
+      },
+      commentTitle () {
+        if (this.$store.state.curPost) {
+          return this.$store.state.curPost.title
         } else {
           return 'main'
         }
@@ -53,6 +73,9 @@
         const bgDouCont = this.sidePanelEl.childNodes[0]
         bgDouCont.style.top = `${-offsetTop}px`
         bgDouCont.style.left = `${-offsetLeft}px`
+      },
+      infoOpen () {
+        this.$store.commit('setInfoShow', true)
       }
     }
   }
@@ -113,6 +136,7 @@
       &__Bottom {
         width: 100%;
         height: 50%;
+        padding: 20px;
         background-color: rgba(154, 24, 94, 0.33);
       }
     }
