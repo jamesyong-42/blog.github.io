@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b1ccc69d-bcf8-4bdd-a77a-55a7b0d3ea83" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apollo/client-configs/default.js" afterPath="$PROJECT_DIR$/apollo/client-configs/default.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/200.html" afterPath="$PROJECT_DIR$/dist/200.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/_nuxt/LICENSES" afterPath="$PROJECT_DIR$/dist/_nuxt/LICENSES" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/_nuxt/app.0337e7620d3b2399fe51.js" afterPath="$PROJECT_DIR$/dist/_nuxt/app.0337e7620d3b2399fe51.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/_nuxt/img/fontawesome-webfont.912ec66.svg" afterPath="$PROJECT_DIR$/dist/_nuxt/img/fontawesome-webfont.912ec66.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/_nuxt/vendor.a19d9e08d2ec3cbe06f1.js" afterPath="$PROJECT_DIR$/dist/_nuxt/vendor.a19d9e08d2ec3cbe06f1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nuxt.config.js" afterPath="$PROJECT_DIR$/nuxt.config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/dist/1-TV/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="3" column="1294" lean-forward="true" selection-start-line="3" selection-start-column="1294" selection-end-line="3" selection-end-column="1294" />
+              <caret line="3" column="1294" lean-forward="false" selection-start-line="3" selection-start-column="1294" selection-end-line="3" selection-end-column="1294" />
               <folding>
                 <marker date="1522220332690" expanded="true" signature="718174:718178" ph="&lt;" />
                 <marker date="1522220332690" expanded="true" signature="739529:739533" ph="&lt;" />
@@ -62,9 +54,9 @@
         <entry file="file://$PROJECT_DIR$/apollo/client-configs/default.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
-              <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="33" />
+              <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="33" />
               <folding>
-                <marker date="1522215357633" expanded="true" signature="503:518" ph="{...}" />
+                <marker date="1522220631510" expanded="true" signature="503:518" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -127,8 +119,8 @@
             <state relative-caret-position="135">
               <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding>
-                <marker date="1522213393785" expanded="true" signature="170:428" ph="{&quot;dev&quot;: &quot;nuxt&quot;...}" />
-                <marker date="1522213393785" expanded="true" signature="1116:1205" ph="{&quot;babel-eslint&quot;: &quot;^8.2.1&quot;...}" />
+                <marker date="1522220631656" expanded="true" signature="170:428" ph="{&quot;dev&quot;: &quot;nuxt&quot;...}" />
+                <marker date="1522220631656" expanded="true" signature="1116:1205" ph="{&quot;babel-eslint&quot;: &quot;^8.2.1&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -167,7 +159,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="gh-pages" />
+        <entry key="$PROJECT_DIR$" value="gh-pages-9771e69" />
       </map>
     </option>
   </component>
@@ -689,7 +681,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189983000" />
+    <option name="totallyTimeSpent" value="190021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="752" y="234" width="2126" height="1024" extended-state="0" />
@@ -1113,8 +1105,8 @@
         <state relative-caret-position="135">
           <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
           <folding>
-            <marker date="1522213393785" expanded="true" signature="170:428" ph="{&quot;dev&quot;: &quot;nuxt&quot;...}" />
-            <marker date="1522213393785" expanded="true" signature="1116:1205" ph="{&quot;babel-eslint&quot;: &quot;^8.2.1&quot;...}" />
+            <marker date="1522220631656" expanded="true" signature="170:428" ph="{&quot;dev&quot;: &quot;nuxt&quot;...}" />
+            <marker date="1522220631656" expanded="true" signature="1116:1205" ph="{&quot;babel-eslint&quot;: &quot;^8.2.1&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -1130,9 +1122,9 @@
     <entry file="file://$PROJECT_DIR$/apollo/client-configs/default.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="33" />
+          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="33" />
           <folding>
-            <marker date="1522215357633" expanded="true" signature="503:518" ph="{...}" />
+            <marker date="1522220631510" expanded="true" signature="503:518" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1148,7 +1140,7 @@
     <entry file="file://$PROJECT_DIR$/dist/1-TV/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="3" column="1294" lean-forward="true" selection-start-line="3" selection-start-column="1294" selection-end-line="3" selection-end-column="1294" />
+          <caret line="3" column="1294" lean-forward="false" selection-start-line="3" selection-start-column="1294" selection-end-line="3" selection-end-column="1294" />
           <folding>
             <marker date="1522220332690" expanded="true" signature="718174:718178" ph="&lt;" />
             <marker date="1522220332690" expanded="true" signature="739529:739533" ph="&lt;" />
