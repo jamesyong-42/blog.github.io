@@ -25,7 +25,7 @@
       // console.log('beforeRouteEnter')
       next()
     },
-    async asyncData({ app, route, store, error }) {
+    async asyncData({ app, route, store, error, payload }) {
       // Default data
       let client = app.apolloProvider.defaultClient
       let data = {
@@ -44,19 +44,28 @@
       console.log('post async st!!!!!', store.state)
       store.commit('setCurPostStyle', curStyle)
       store.commit('setCurPost', post)
-      const res = await client.query({
-        query: QUERY_POST,
-        variables: {
-          id: id
-        }
-      })
-      data.index = index
-      data.body = res.data.node.bodyHTML
-      data.title = res.data.node.title
-      data.label = res.data.node.labels.edges[0].node.name
-      // console.log(data.body)
-      console.log('post async en!!!!!', store.state)
-      return data
+
+      if (payload) {
+        data.body = payload.bodyHTML
+        data.title = payload.title
+        data.label = payload.labels.edges[0].node.name
+        console.log('post async en!!!!!', store.state)
+        return data
+      } else {
+        const res = await client.query({
+          query: QUERY_POST,
+          variables: {
+            id: id
+          }
+        })
+        data.index = index
+        data.body = res.data.node.bodyHTML
+        data.title = res.data.node.title
+        data.label = res.data.node.labels.edges[0].node.name
+        // console.log(data.body)
+        console.log('post async en!!!!!', store.state)
+        return data
+      }
     },
     components: {
     },
@@ -71,7 +80,7 @@
     },
     mounted () {
       if (!this.$store.state.browseHistory.hasHistory) {
-        this.$store.commit('setBrowseHistory', this.index, null)
+        this.$store.commit('setBrowseHistory', {postIndex: this.index, scrollPos: -1})
       }
 
       let scrollBar = this.$store.state.scrollBar

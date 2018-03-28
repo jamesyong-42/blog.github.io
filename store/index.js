@@ -19,7 +19,7 @@ const store = () => new Vuex.Store({
     browseHistory: {
       hasHistory: false,
       postIndex: -1,
-      scrollPos: null
+      scrollPos: -1
     }
   },
   mutations: {
@@ -59,10 +59,10 @@ const store = () => new Vuex.Store({
     setScrollPos(state, scrollPos) {
       state.scrollPos = scrollPos
     },
-    setBrowseHistory(state, postIndex, scrollPos) {
+    setBrowseHistory(state, payload) {
       state.browseHistory.hasHistory = true
-      state.browseHistory.postIndex = postIndex
-      state.browseHistory.scrollPos = scrollPos
+      state.browseHistory.postIndex = payload.postIndex
+      state.browseHistory.scrollPos = payload.scrollPos
     }
   },
   actions: {

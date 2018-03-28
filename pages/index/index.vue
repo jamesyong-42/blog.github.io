@@ -73,7 +73,7 @@
         target.addEventListener('animationend', () => {
           removeClass(target, 'blog__list__item__content--inactive')
         })
-        if (this.$store.state.browseHistory.scrollPos) {
+        if (this.$store.state.browseHistory.scrollPos !== -1) {
           const scrollBar = this.$store.state.scrollBar
           scrollBar.update() //force update since content change!!
           scrollBar.setPosition(0, this.$store.state.browseHistory.scrollPos)
@@ -141,14 +141,14 @@
       this.$store.commit('setCurPostEl', target)
       addClass(target, 'blog__list__item__content--active')
 
-      const scrollBar = this.$store.state.scrollBar
+      const offset = this.$store.state.scrollBar.offset.y
 
       let that = this
       setTimeout(() => {
         that.$store.commit('setCurPostStyle', labelstyle)
         that.$store.commit('setPostLoading', true)
         setTimeout(() => {
-          that.$store.commit('setBrowseHistory', parseInt(index), scrollBar.offset.y)
+          that.$store.commit('setBrowseHistory', {postIndex: parseInt(index), scrollPos: offset})
           next()
         }, 500)
       }, 500)

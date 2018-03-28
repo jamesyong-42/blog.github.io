@@ -1,3 +1,12 @@
+const { createApolloFetch } = require('apollo-fetch')
+
+
+
+
+
+
+
+
 module.exports = {
   /*
   ** Headers of the page
@@ -58,10 +67,70 @@ module.exports = {
     minify: {
       collapseWhitespace: false
     },
-    routes: ['/1-TV', '2-Movie']
-    // routes: (ctx) => {
-    //   console.log('OOOOOOOGGGGGGG', ctx)
-    // }
+    // routes: ['/1-TV', '2-Movie']
+    routes: function () {
+      const uri = 'https://api.github.com/graphql'
+      const token = 'bb98e6fd2ec628ac7d' + 'bae028da70f7fb3e47bcc4' //prevent Github auto detection
+
+      const apolloFetch = createApolloFetch({ uri })
+
+      apolloFetch.use(({ request, options }, next) => {
+        if (!options.headers) {
+          options.headers = {};  // Create the headers object if needed.
+        }
+        options.headers['authorization'] = `Bearer ${token}`
+        next()
+      })
+      const query = `query { 
+      repository(owner: "Sakilove", name: "blog.github.io") {
+        labels(first:20) {
+          edges {
+            node {
+              name
+            }
+          }
+        }
+        issues(last: 100, labels: "Yong", states:OPEN) {
+          totalCount
+          edges {
+            node {
+              number
+              title
+              url
+              id
+              bodyHTML
+              labels(first:2) {
+                edges {
+                  node {
+                    name
+                    description
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+     }`
+
+      return apolloFetch({ query }) // all apolloFetch arguments are optional
+        .then(result => {
+          console.log(result)
+          const { data } = result
+
+          return data.repository.issues.edges.map((post, index) => {
+            return {
+              route: `/${index}-${post.node.title}`,
+              payload: post.node
+            }
+          })
+        })
+        .catch(error => {
+          console.log('got error')
+          console.log(error)
+        })
+
+    }
   },
   plugins: [
     {src: '~/plugins/overscroll', ssr: false} //set ssr:false fix 'SyntaxError: Unexpected token import'
