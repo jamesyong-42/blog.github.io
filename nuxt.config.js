@@ -57,7 +57,11 @@ module.exports = {
   generate: {
     minify: {
       collapseWhitespace: false
-    }
+    },
+    routes: ['/1-TV', '2-Movie']
+    // routes: (ctx) => {
+    //   console.log('OOOOOOOGGGGGGG', ctx)
+    // }
   },
   plugins: [
     {src: '~/plugins/overscroll', ssr: false} //set ssr:false fix 'SyntaxError: Unexpected token import'

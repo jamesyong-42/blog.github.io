@@ -4,7 +4,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 
 
 const API = 'https://api.github.com/graphql'
-const token = '7143cc00ee41de24eaef' + 'a162d1ee77dbe3a39f2f' //prevent Github auto detection
+const token = 'bb98e6fd2ec628ac7d' + 'bae028da70f7fb3e47bcc4' //prevent Github auto detection
 
 
 export default () => {
