@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1ccc69d-bcf8-4bdd-a77a-55a7b0d3ea83" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/scss/base/_components.disqus.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ga.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apollo/graphql/posts.gql" afterPath="$PROJECT_DIR$/apollo/graphql/posts.gql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/base/_tools.mixins.scss" afterPath="$PROJECT_DIR$/assets/scss/base/_tools.mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/base/main.scss" afterPath="$PROJECT_DIR$/assets/scss/base/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/SidePanel.vue" afterPath="$PROJECT_DIR$/components/SidePanel.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vue-disqus/VueDisqus.vue" afterPath="$PROJECT_DIR$/components/vue-disqus/VueDisqus.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/200.html" afterPath="$PROJECT_DIR$/dist/200.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/_nuxt/LICENSES" afterPath="$PROJECT_DIR$/dist/_nuxt/LICENSES" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/_nuxt/app.6de0ab496ff6e1f89b25.js" afterPath="$PROJECT_DIR$/dist/_nuxt/app.6de0ab496ff6e1f89b25.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layouts/default.vue" afterPath="$PROJECT_DIR$/layouts/default.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nuxt.config.js" afterPath="$PROJECT_DIR$/nuxt.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index.vue" afterPath="$PROJECT_DIR$/pages/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index/index.vue" afterPath="$PROJECT_DIR$/pages/index/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/store/index.js" afterPath="$PROJECT_DIR$/store/index.js" />
-    </list>
+    <list default="true" id="b1ccc69d-bcf8-4bdd-a77a-55a7b0d3ea83" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -690,7 +672,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259685000" />
+    <option name="totallyTimeSpent" value="259911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1614" y="232" width="1796" height="1035" extended-state="0" />
@@ -987,7 +969,7 @@
         <state relative-caret-position="96">
           <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="33" />
           <folding>
-            <marker date="1522301127352" expanded="true" signature="503:518" ph="{...}" />
+            <marker date="1522326544910" expanded="true" signature="503:518" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1079,8 +1061,8 @@
         <state relative-caret-position="600">
           <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding>
-            <marker date="1522301127503" expanded="true" signature="170:428" ph="{&quot;dev&quot;: &quot;nuxt&quot;...}" />
-            <marker date="1522301127503" expanded="true" signature="1146:1235" ph="{&quot;babel-eslint&quot;: &quot;^8.2.1&quot;...}" />
+            <marker date="1522326545066" expanded="true" signature="170:428" ph="{&quot;dev&quot;: &quot;nuxt&quot;...}" />
+            <marker date="1522326545066" expanded="true" signature="1146:1235" ph="{&quot;babel-eslint&quot;: &quot;^8.2.1&quot;...}" />
           </folding>
         </state>
       </provider>
