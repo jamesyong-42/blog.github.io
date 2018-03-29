@@ -1,7 +1,7 @@
 <template>
   <div id="bg-container-double">
-    <div class="stars-mid bg-item" data-depth="0.25"></div>
-    <div class="stars-big bg-item" data-depth="0.30"></div>
+    <div class="stars-mid bg-item" data-depth="0.2"></div>
+    <div class="stars-big bg-item" data-depth="0.3"></div>
     <!--<img class="bg-item" src="/lighthouse-wave4.svg" data-depth="0.35"/>-->
     <!--<img class="bg-item" src="/lighthouse-wave3.svg" data-depth="0.40"/>-->
     <!--<img class="bg-item" src="/lighthouse.svg" data-depth="0.50"/>-->
@@ -9,25 +9,25 @@
     <!--<img class="bg-item" src="/lighthouse-wave1.svg" data-depth="0.60"/>-->
     <!--SVG-Sprite-->
 
-    <svg class="bg-item" data-depth="0.35" x="0px" y="0px"
-         viewBox="0 0 2606.8 1415.9" preserveAspectRatio="xMinYMin slice">
-      <use xlink:href="#wave4"  width="2606.8" height="1415.9" x="-1303.4" y="-707.9" transform="matrix(1 0 0 -1 1303.41 707.93)" style="overflow:visible;"/>
+    <svg class="bg-item" data-depth="0.45" x="0px" y="0px"
+         viewBox="0 0 2607 1416" preserveAspectRatio="xMidYMid slice">
+      <use xlink:href="#wave4"  width="2607" height="1416" x="-1304" y="-708" transform="matrix(1 0 0 -1 1304 708)" style="overflow:visible;"/>
     </svg>
-    <svg class="bg-item" data-depth="0.40" x="0px" y="0px"
-         viewBox="0 0 2606.8 1415.9" preserveAspectRatio="xMinYMin slice">
-      <use xlink:href="#wave3"  width="2611.4" height="1415.9" x="-1305.7" y="-707.9" transform="matrix(1 0 0 -1 1305.1851 708.86)" style="overflow:visible;"/>
+    <svg class="bg-item" data-depth="0.5" x="0px" y="0px"
+         viewBox="0 0 2607 1416" preserveAspectRatio="xMidYMid slice">
+      <use xlink:href="#wave3"  width="2612" height="1416" x="-1306" y="-708" transform="matrix(1 0 0 -1 1306 709)" style="overflow:visible;"/>
     </svg>
-    <svg class="bg-item" data-depth="0.50" x="0px" y="0px"
-         viewBox="0 0 2606.8 1415.9" preserveAspectRatio="xMinYMin slice">
-      <use xlink:href="#lighthouse"  width="2606.8" height="1415.9" x="-1303.4" y="-707.9" transform="matrix(1 0 0 -1 1303.41 707.93)" style="overflow:visible;"/>
+    <svg class="bg-item" data-depth="0.4" x="0px" y="0px"
+         viewBox="0 0 2607 1416" preserveAspectRatio="xMidYMid slice">
+      <use xlink:href="#lighthouse"  width="2607" height="1416" x="-1304" y="-707.9" transform="matrix(1 0 0 -1 1304 708)" style="overflow:visible;"/>
     </svg>
-    <svg class="bg-item" data-depth="0.55" x="0px" y="0px"
-         viewBox="0 0 2606.8 1415.9" preserveAspectRatio="xMinYMin slice">
-      <use xlink:href="#wave2"  width="2606.8" height="1415.9" x="-1303.4" y="-707.9" transform="matrix(1 0 0 -1 1306.5851 710.93)" style="overflow:visible;"/>
+    <svg class="bg-item" data-depth="0.8" x="0px" y="0px"
+         viewBox="0 0 2607 1416" preserveAspectRatio="xMidYMid slice">
+      <use xlink:href="#wave2"  width="2607" height="1416" x="-1304" y="-708" transform="matrix(1 0 0 -1 1307 711)" style="overflow:visible;"/>
     </svg>
-    <svg class="bg-item" data-depth="0.60" x="0px" y="0px"
-         viewBox="0 0 2606.8 1415.9" preserveAspectRatio="xMinYMin slice">
-      <use xlink:href="#wave1"  width="2608.5" height="1417.8" x="-1304.2" y="-708.9" transform="matrix(1 0 0 -1 1305.1484 711.9077)" style="overflow:visible;"/>
+    <svg class="bg-item wave1" data-depth="1.2" x="0px" y="0px"
+         viewBox="0 0 2607 1416" preserveAspectRatio="xMidYMid slice">
+      <use xlink:href="#wave1"  width="2609" height="1418" x="-1305" y="-709" transform="matrix(1 0 0 -1 1306 712)" style="overflow:visible;"/>
     </svg>
   </div>
 </template>
@@ -69,6 +69,7 @@
       top: 0;
       left: 0;
       object-fit: cover;
+      will-change: transform;
     }
     .stars-tiny {
       background-image: url("/stars-tiny.png");
