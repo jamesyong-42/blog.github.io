@@ -1,6 +1,7 @@
 <template>
   <div>
     <svg-icons></svg-icons>
+    <svg-bg></svg-bg>
     <nuxt :class="{'blur' : $store.state.infoShow}"/>
     <div v-if="$store.state.infoShow" class="info">
       <div class="info__content">
@@ -23,9 +24,11 @@
 </template>
 <script>
   import SvgIcons from '~/components/SVGIcons.vue'
+  import SvgBg from '~/components/SVGBG.vue'
   export default {
     components: {
-      SvgIcons
+      SvgIcons,
+      SvgBg
     },
     data () {
       return {
