@@ -105,6 +105,3 @@
   </svg>
 </template>
 
-<style>
-
-</style>
