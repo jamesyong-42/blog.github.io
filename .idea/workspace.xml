@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1ccc69d-bcf8-4bdd-a77a-55a7b0d3ea83" name="Default" comment="" />
+    <list default="true" id="b1ccc69d-bcf8-4bdd-a77a-55a7b0d3ea83" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/200.html" afterPath="$PROJECT_DIR$/dist/200.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/_nuxt/LICENSES" afterPath="$PROJECT_DIR$/dist/_nuxt/LICENSES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/_nuxt/app.3d5d8b6419c4bfa730bf.js" afterPath="$PROJECT_DIR$/dist/_nuxt/app.3d5d8b6419c4bfa730bf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nuxt.config.js" afterPath="$PROJECT_DIR$/nuxt.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index.vue" afterPath="$PROJECT_DIR$/pages/index.vue" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,11 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="nuxt.config.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nuxt.config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nuxt.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+            <state relative-caret-position="455">
+              <caret line="127" column="4" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -28,8 +36,8 @@
       <file leaf-file-name="SidePanel.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/SidePanel.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="193" column="9" lean-forward="false" selection-start-line="193" selection-start-column="9" selection-end-line="193" selection-end-column="9" />
+            <state relative-caret-position="-4944">
+              <caret line="22" column="69" lean-forward="false" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
               <folding>
                 <element signature="e#4326#4390#0" expanded="true" />
               </folding>
@@ -37,21 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.4906585d24089ee81935.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dist/_nuxt/app.4906585d24089ee81935.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/index/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5424">
-              <caret line="226" column="24" lean-forward="false" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="24" />
+            <state relative-caret-position="-7422">
+              <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -112,10 +110,10 @@
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="35" />
+            <state relative-caret-position="168">
+              <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
               <folding>
-                <element signature="e#464#516#0" expanded="true" />
+                <element signature="e#465#517#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/scss/base/_base.quotes.scss" />
         <option value="$PROJECT_DIR$/assets/scss/base/_settings.syntax.scss" />
         <option value="$PROJECT_DIR$/assets/scss/base/_themes.postThemes.scss" />
         <option value="$PROJECT_DIR$/assets/scss/base/post/_themes.postThemes.scss" />
@@ -189,7 +186,6 @@
         <option value="$PROJECT_DIR$/components/vue-disqus/vue-disqus.js" />
         <option value="$PROJECT_DIR$/pages/index/_slug.vue" />
         <option value="$PROJECT_DIR$/dist/_nuxt/app.47a336bb54f9e28791e5.js" />
-        <option value="$PROJECT_DIR$/pages/index.vue" />
         <option value="$PROJECT_DIR$/layouts/default.vue" />
         <option value="$PROJECT_DIR$/pages/index/index.vue" />
         <option value="$PROJECT_DIR$/store/index.js" />
@@ -199,10 +195,12 @@
         <option value="$PROJECT_DIR$/components/vue-disqus/VueDisqus.vue" />
         <option value="$PROJECT_DIR$/assets/scss/base/_components.disqus.scss" />
         <option value="$PROJECT_DIR$/plugins/ga.js" />
-        <option value="$PROJECT_DIR$/nuxt.config.js" />
         <option value="$PROJECT_DIR$/dist/_nuxt/app.6de0ab496ff6e1f89b25.js" />
         <option value="$PROJECT_DIR$/components/SidePanel.vue" />
         <option value="$PROJECT_DIR$/dist/_nuxt/app.4906585d24089ee81935.js" />
+        <option value="$PROJECT_DIR$/pages/index.vue" />
+        <option value="$PROJECT_DIR$/nuxt.config.js" />
+        <option value="$PROJECT_DIR$/dist/_nuxt/app.3d5d8b6419c4bfa730bf.js" />
       </list>
     </option>
   </component>
@@ -224,10 +222,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1614" />
-    <option name="y" value="232" />
-    <option name="width" value="1796" />
-    <option name="height" value="1035" />
+    <option name="x" value="796" />
+    <option name="y" value="193" />
+    <option name="width" value="2404" />
+    <option name="height" value="1075" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -672,13 +670,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260779000" />
+    <option name="totallyTimeSpent" value="261973000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1614" y="232" width="1796" height="1035" extended-state="0" />
+    <frame x="796" y="193" width="2404" height="1075" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22580644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1672355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938856" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="GraphQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -750,22 +748,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/BackgroundDouble.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="2554" column="16" lean-forward="false" selection-start-line="2554" selection-start-column="16" selection-end-line="2554" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#svg#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#symbol#0;n#svg#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#symbol#1;n#svg#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#symbol#2;n#svg#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#symbol#3;n#svg#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#symbol#4;n#svg#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/_nuxt/app.0337e7620d3b2399fe51.js" />
     <entry file="file://$PROJECT_DIR$/dist/1-TV/index.html" />
     <entry file="file://$PROJECT_DIR$/apollo/graphql/post.gql">
       <provider selected="true" editor-type-id="text-editor">
@@ -947,6 +929,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1003,16 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="35" />
-          <folding>
-            <element signature="e#464#516#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/base/_components.disqus.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1031,37 +1004,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+    <entry file="file://$PROJECT_DIR$/dist/_nuxt/app.6de0ab496ff6e1f89b25.js" />
+    <entry file="file://$PROJECT_DIR$/dist/_nuxt/app.4906585d24089ee81935.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5424">
-          <caret line="226" column="24" lean-forward="false" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/_nuxt/app.6de0ab496ff6e1f89b25.js" />
     <entry file="file://$PROJECT_DIR$/components/SidePanel.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="193" column="9" lean-forward="false" selection-start-line="193" selection-start-column="9" selection-end-line="193" selection-end-column="9" />
+        <state relative-caret-position="-4944">
+          <caret line="22" column="69" lean-forward="false" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
           <folding>
             <element signature="e#4326#4390#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/_nuxt/app.4906585d24089ee81935.js">
+    <entry file="file://$PROJECT_DIR$/pages/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding>
+            <element signature="e#465#517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7422">
+          <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/_nuxt/app.3d5d8b6419c4bfa730bf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="0" column="11145" lean-forward="false" selection-start-line="0" selection-start-column="11145" selection-end-line="0" selection-end-column="11145" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="127" column="4" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
           <folding />
         </state>
       </provider>

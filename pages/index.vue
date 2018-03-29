@@ -4,7 +4,7 @@
     <div class="sub-container">
       <img class="ribben" src="/ribben.svg" @click="toggleSidePanel"/>
 
-      <side-panel v-if="$store.state.sidePanelShow"></side-panel>
+      <side-panel v-if="$store.state.sidePanelShow" ></side-panel>
       <div class="blog__container"
            :class="$store.state.curPostStyle">
         <nuxt-child/>

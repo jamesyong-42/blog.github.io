@@ -127,7 +127,7 @@ module.exports = {
     }
   },
   plugins: [
-    { src: '~plugins/ga.js', ssr: false },
+    {src: '~/plugins/ga.js', ssr: false },
     {src: '~/plugins/overscroll', ssr: false} //set ssr:false fix 'SyntaxError: Unexpected token import'
   ],
   modules: ['@nuxtjs/apollo'],
