@@ -4,6 +4,7 @@ query posts($owner: String!, $name: String!, $last: Int!) {
       edges {
         node {
           name
+          description
         }
       }
     }

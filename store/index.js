@@ -7,6 +7,7 @@ const store = () => new Vuex.Store({
     lang: {},
     labels: [],
     tags: [],
+    postsOrig: [],
     posts: [],
     postIDs: [],
     infoShow: false,
@@ -41,6 +42,9 @@ const store = () => new Vuex.Store({
     },
     setPosts(state, posts) {
       state.posts = posts
+    },
+    setPostsOrig(state, postsOrig) {
+      state.postsOrig = postsOrig
     },
     setPostLoading(state, postLoading) {
       state.postLoading = postLoading
@@ -77,11 +81,11 @@ const store = () => new Vuex.Store({
       state.browseHistory.postIndex = payload.postIndex
       state.browseHistory.scrollPos = payload.scrollPos
     },
-    setCommentSection(state, payload) {
-      state.commentSection.containerShow = payload.containerShow
-      state.commentSection.commentShow = payload.commentShow
-
-    },
+    // setCommentSection(state, payload) {
+    //   state.commentSection.containerShow = payload.containerShow
+    //   state.commentSection.commentShow = payload.commentShow
+    //
+    // },
     setCommentSectionContainer(state, containerShow) {
       state.commentSection.containerShow = containerShow
     },
@@ -90,6 +94,26 @@ const store = () => new Vuex.Store({
     },
     setDisqusFail(state, disqusFail) {
       state.disqusFail = disqusFail
+    },
+    tagFilter (state, tag) {
+      let tt = state.tags.find(t => {
+        return t.name === tag
+      })
+      if (tt.selected) {
+        state.posts = state.postsOrig
+        state.tags.forEach(d => {
+          d.selected = false
+        })
+      } else {
+        state.tags.forEach(d => {
+          state.posts = tt.posts
+          if (d.name === tag) {
+            d.selected = true
+          } else {
+            d.selected = false
+          }
+        })
+      }
     }
   },
   actions: {
@@ -104,10 +128,25 @@ const store = () => new Vuex.Store({
           last: 26
         }
       })
+
+
+      let tags = []
+      res.data.repository.labels.edges.map(d => {
+        if(d.node.name.indexOf('tag') !== -1) {
+          tags.push({
+            name: d.node.name.split('-')[1],
+            nameEN: d.node.description,
+            count: 0,
+            posts:[],
+            selected: false
+          })
+        }
+      })
+
       const posts = res.data.repository.issues.edges.map(p => {
         let style = 'style' + Math.ceil(Math.random() * 7)
         let icon = 'Design'
-        let tags = []
+        let ts = []
         const labels = p.node.labels.edges
         labels.forEach(l => {
           if (l.node.name.match(/style\d/)) {
@@ -117,56 +156,63 @@ const store = () => new Vuex.Store({
             icon = l.node.name.split('-')[1]
           }
           if (l.node.name.split('-')[0] === 'tag') {
-            tags.push(l.node.name.split('-')[1])
+            ts.push(
+            {
+              name: l.node.name.split('-')[1],
+              nameEN: l.node.description
+            }
+            )
           }
         })
-        return {
+        const pp = {
           style: style,
           icon: icon,
-          tags: tags,
+          tags: ts,
           title: p.node.title,
           id: p.node.id
         }
+        pp.tags.forEach(tag => {
+          tags.forEach(t => {
+            if (t.name === tag.name) {
+              t.count ++
+              t.posts.push(pp)
+            }
+          })
+        })
+        return pp
       })
-      const ids = posts.map(d => d.id)
 
+      const ids = posts.map(d => d.id)
+      commit('setTags', tags)
       commit('setPostIDs', ids)
       commit('setPosts', posts)
-      let tags = []
-      res.data.repository.labels.edges.map(d => {
-        if(d.node.name.indexOf('tag') !== -1) {
-          tags.push(d.node.name.split('-')[1])
-        }
-      })
-      commit('setTags', tags)
-
-
+      commit('setPostsOrig', posts)
       console.log('!!!nuxtServerInit en')
     },
-    commentSectionOn ({commit}) {
-      commit('setCommentSection', {
-        containerShow: false,
-        commentShow: true
-      })
-    },
-    commentSectionOff ({commit}) {
-      commit('setCommentSection', {
-        containerShow: false,
-        commentShow: false
-      })
-    },
-    toggleSectionContainer ({commit, state}) {
-      commit('setCommentSection', {
-        containerShow: !state.commentSection.containerShow,
-        commentShow: state.commentSection.commentShow
-      })
-    },
-    sectionContainerOn ({commit, state}) {
-      commit('setCommentSection', {
-        containerShow: true,
-        commentShow: state.commentSection.commentShow
-      })
-    },
+    // commentSectionOn ({commit}) {
+    //   commit('setCommentSection', {
+    //     containerShow: false,
+    //     commentShow: true
+    //   })
+    // },
+    // commentSectionOff ({commit}) {
+    //   commit('setCommentSection', {
+    //     containerShow: false,
+    //     commentShow: false
+    //   })
+    // },
+    // toggleSectionContainer ({commit, state}) {
+    //   commit('setCommentSection', {
+    //     containerShow: !state.commentSection.containerShow,
+    //     commentShow: state.commentSection.commentShow
+    //   })
+    // },
+    // sectionContainerOn ({commit, state}) {
+    //   commit('setCommentSection', {
+    //     containerShow: true,
+    //     commentShow: state.commentSection.commentShow
+    //   })
+    // },
     toggleLocale ({commit, state}) {
       if (state.locale === 'zh') {
         commit('setLocale', 'en')

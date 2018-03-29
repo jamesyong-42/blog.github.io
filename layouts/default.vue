@@ -9,10 +9,13 @@
         </div>
         <div class="info__content__avatar"></div>
         <div class="info__content__intro">
-          <h2>XXXXXXXXXXXXXXXXXXXXXXX</h2>
+          <h2>Be the change you want to see in the world.</h2>
         </div>
         <div class="info__content__contact">
           <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
+          <svg class="icon icon-behance"><use xlink:href="#icon-behance"></use></svg>
+          <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+          <svg class="icon icon-envelope"><use xlink:href="#icon-envelope"></use></svg>
         </div>
       </div>
     </div>
@@ -52,28 +55,36 @@
     align-items: center;
     background-color: rgba(100, 17, 65, 0.5);
     &__content {
-
+      color: white;
       &__avatar {
-        width: 30vmin;
-        height: 30vmin;
+        width: 25vmin;
+        height: 25vmin;
         margin: auto;
         background-image: url("/avatar.png");
         background-size: contain;
+      }
+      &__close {
+        .icon {
+          font-size: 3rem;
+          float: right;
+          cursor: pointer;
+        }
       }
       &__intro {
         margin: auto;
       }
       &__contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: auto;
-      }
-      &__close {
         .icon {
-          font-size: 3rem;
-          color: white;
-          float: right;
+          font-size: 2rem;
+          margin: 0 10px;
           cursor: pointer;
         }
       }
+
     }
   }
 

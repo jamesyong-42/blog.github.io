@@ -1,21 +1,23 @@
 <template>
-  <div class="blog__list">
-    <template v-if="$store.state.posts">
-      <template v-for="(post, index) in $store.state.posts">
-        <div :id="'item-' + index" :key="index" class="blog__list__item">
-          <div class="blog__list__item__content"
-               :data-labelstyle="post.style"
-               :class="post.style">
-            <!--<a @click="blogClick(post.node.id, post.node.title)">{{ post.node.title }}</a>-->
-            <nuxt-link :to="`/${index}-${post.title}`">{{ post.title }}</nuxt-link>
-            <svg :class="`icon icon-${post.icon}`"><use :xlink:href="`#icon-${post.icon}`"></use></svg>
-            <!--<i :class="`blog__list__item__content__icon ${post.node.labels.edges[0].node.name}`"></i>-->
-          </div>
-        </div>
-      </template>
-    </template>
 
-  </div>
+
+  <transition-group v-if="$store.state.posts" name="list" class="blog__list" tag="div">
+    <template v-for="(post, index) in $store.state.posts">
+      <div :id="'item-' + index" :key="index" class="blog__list__item">
+        <div class="blog__list__item__content"
+             :data-labelstyle="post.style"
+             :class="post.style">
+          <!--<a @click="blogClick(post.node.id, post.node.title)">{{ post.node.title }}</a>-->
+          <nuxt-link :to="`/${index}-${post.title}`">{{ post.title }}</nuxt-link>
+          <svg :class="`icon icon-${post.icon}`"><use :xlink:href="`#icon-${post.icon}`"></use></svg>
+          <!--<i :class="`blog__list__item__content__icon ${post.node.labels.edges[0].node.name}`"></i>-->
+        </div>
+      </div>
+    </template>
+  </transition-group>
+
+
+
 </template>
 
 <script>
@@ -211,12 +213,20 @@
 </script>
 
 <style lang="scss">
+  .list-enter-active, .list-leave-active {
+    transition: all 1s;
+  }
+  .list-enter, .list-leave-to
+    /* .list-leave-active for below version 2.1.8 */ {
+    opacity: 0;
+    transform: translateY(30px);
+  }
   .blog__list {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     &__item {
       width: 33.3%;
       position: relative;

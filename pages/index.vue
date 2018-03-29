@@ -90,7 +90,7 @@ export default {
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
     &:hover {
-      transform: translate3D(0, 70px, 0);
+      transform: translate3D(0, 10px, 0);
     }
   }
 

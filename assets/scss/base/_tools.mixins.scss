@@ -21,6 +21,13 @@
        -o-transition-duration: $duration;
           transition-duration: $duration;
 }
+@mixin transition ($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
 
 @mixin rotate($angular) {
   -webkit-transform: rotate($angular);

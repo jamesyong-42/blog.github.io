@@ -98,9 +98,10 @@
         if (this.language){
           disqusConfig.language = this.language;
         }
-
+        console.log(disqusConfig)
         disqusConfig.callbacks.onReady = [() => {
           this.$emit('ready')
+          console.log('preData')
         }]
       }
     }
