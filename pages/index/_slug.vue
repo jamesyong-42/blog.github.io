@@ -40,8 +40,8 @@
       }
       const slug = route.params.slug
       const index = parseInt(slug.split('-')[0])
-      const post = store.state.posts[index].node
-      const curStyle = post.labels.edges[0].node.description
+      const post = store.state.posts[index]
+      const curStyle = post.style
       const id = post.id
       console.log('post async st!!!!!', store.state)
       store.commit('setCurPostStyle', curStyle)
@@ -81,6 +81,8 @@
 
     },
     mounted () {
+      this.$store.commit('setCommentSectionComment', true)
+
       if (!this.$store.state.browseHistory.hasHistory) {
         this.$store.commit('setBrowseHistory', {postIndex: this.index, scrollPos: -1})
       }
@@ -95,6 +97,9 @@
       this.returnBtn = document.querySelector('.Post__ReturnBtn')
       this.mask = document.querySelector('.Post__HeadMask')
       this.$store.state.scrollBar.addListener(this.freezeReturnBtn)
+    },
+    beforeDestroy () {
+      this.$store.commit('setCommentSectionComment', false)
     },
     beforeRouterLeave () {
     },

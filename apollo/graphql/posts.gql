@@ -1,6 +1,6 @@
 query posts($owner: String!, $name: String!, $last: Int!) {
   repository(owner: $owner, name: $name) {
-    labels(first:20) {
+    labels(first:50) {
       edges {
         node {
           name
@@ -15,7 +15,7 @@ query posts($owner: String!, $name: String!, $last: Int!) {
           title
           url
           id
-          labels(first:2) {
+          labels(first:20) {
             edges {
               node {
                 name

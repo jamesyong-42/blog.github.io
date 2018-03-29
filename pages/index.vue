@@ -81,12 +81,13 @@ export default {
 
   .ribben {
     position: absolute;
+    z-index: 999;
     cursor: pointer;
     top: -80px;
     right: 0;
     width: 50px;
     object-fit: contain;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-timing-function: ease-out;
     &:hover {
       transform: translate3D(0, 70px, 0);

@@ -3,9 +3,10 @@ import QUERY_POSTS from '~/apollo/graphql/posts.gql'
 
 const store = () => new Vuex.Store({
   state: {
-    locale: 'en',
+    locale: 'zh',
     lang: {},
     labels: [],
+    tags: [],
     posts: [],
     postIDs: [],
     infoShow: false,
@@ -21,7 +22,12 @@ const store = () => new Vuex.Store({
       hasHistory: false,
       postIndex: -1,
       scrollPos: -1
-    }
+    },
+    commentSection: {
+      containerShow: false,
+      commentShow: false
+    },
+    disqusFail: false
   },
   mutations: {
     setLocale(state, locale) {
@@ -29,6 +35,9 @@ const store = () => new Vuex.Store({
     },
     setLabels(state, labels) {
       state.labels = labels
+    },
+    setTags(state, tags) {
+      state.tags = tags
     },
     setPosts(state, posts) {
       state.posts = posts
@@ -67,6 +76,20 @@ const store = () => new Vuex.Store({
       state.browseHistory.hasHistory = true
       state.browseHistory.postIndex = payload.postIndex
       state.browseHistory.scrollPos = payload.scrollPos
+    },
+    setCommentSection(state, payload) {
+      state.commentSection.containerShow = payload.containerShow
+      state.commentSection.commentShow = payload.commentShow
+
+    },
+    setCommentSectionContainer(state, containerShow) {
+      state.commentSection.containerShow = containerShow
+    },
+    setCommentSectionComment(state, commentShow) {
+      state.commentSection.commentShow = commentShow
+    },
+    setDisqusFail(state, disqusFail) {
+      state.disqusFail = disqusFail
     }
   },
   actions: {
@@ -81,14 +104,75 @@ const store = () => new Vuex.Store({
           last: 26
         }
       })
-      const posts = res.data.repository.issues.edges
-      const ids = posts.map(d => d.node.id)
+      const posts = res.data.repository.issues.edges.map(p => {
+        let style = 'style' + Math.ceil(Math.random() * 7)
+        let icon = 'Design'
+        let tags = []
+        const labels = p.node.labels.edges
+        labels.forEach(l => {
+          if (l.node.name.match(/style\d/)) {
+            style = l.node.name
+          }
+          if (l.node.name.split('-')[0] === 'i') {
+            icon = l.node.name.split('-')[1]
+          }
+          if (l.node.name.split('-')[0] === 'tag') {
+            tags.push(l.node.name.split('-')[1])
+          }
+        })
+        return {
+          style: style,
+          icon: icon,
+          tags: tags,
+          title: p.node.title,
+          id: p.node.id
+        }
+      })
+      const ids = posts.map(d => d.id)
+
       commit('setPostIDs', ids)
       commit('setPosts', posts)
-      let lebels = res.data.repository.labels.edges.map(d => d.node.name)
-      lebels.splice(lebels.indexOf('Yong'), 1)
-      commit('setLabels', lebels)
+      let tags = []
+      res.data.repository.labels.edges.map(d => {
+        if(d.node.name.indexOf('tag') !== -1) {
+          tags.push(d.node.name.split('-')[1])
+        }
+      })
+      commit('setTags', tags)
+
+
       console.log('!!!nuxtServerInit en')
+    },
+    commentSectionOn ({commit}) {
+      commit('setCommentSection', {
+        containerShow: false,
+        commentShow: true
+      })
+    },
+    commentSectionOff ({commit}) {
+      commit('setCommentSection', {
+        containerShow: false,
+        commentShow: false
+      })
+    },
+    toggleSectionContainer ({commit, state}) {
+      commit('setCommentSection', {
+        containerShow: !state.commentSection.containerShow,
+        commentShow: state.commentSection.commentShow
+      })
+    },
+    sectionContainerOn ({commit, state}) {
+      commit('setCommentSection', {
+        containerShow: true,
+        commentShow: state.commentSection.commentShow
+      })
+    },
+    toggleLocale ({commit, state}) {
+      if (state.locale === 'zh') {
+        commit('setLocale', 'en')
+      } else {
+        commit('setLocale', 'zh')
+      }
     }
   }
 })
